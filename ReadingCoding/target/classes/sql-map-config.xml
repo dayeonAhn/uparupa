@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+			<!-- datasource 설정 -->
+	<typeAliases>
+		<!-- <typeAlias alias="board" type="org.rc.uparupa.board.BoardVO"/> -->
+		<!-- 각 필요한 VO 연결 -->>
+	</typeAliases>
+	
+	
+	
+	
+	<!-- sql mapping 설정 -->
+	<mappers>
+		<!-- <mapper resource="mappings/board-mapping.xml"/> -->
+		<!-- 각 필요한 mapper 연결-> mappings 폴더 안에 만들기 -->>
+	</mappers>
+</configuration>
+
