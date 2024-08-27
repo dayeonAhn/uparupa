@@ -1,0 +1,829 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 내 서재 시작페이지 (캘린더 - 독후감 작성) */
+
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nickname-container {
+    margin: 0 170px;
+    font-family: 'Cafe24Ssurround', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+/* Cafe24 Surround 폰트 추가 */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nickname-container h1 {
+    margin: 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Cafe24Ssurround';
+}
+
+.nickname-container p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Cafe24Ssurround';
+}
+
+.divider {
+    background-color: #65508B;
+    height: 3px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    border: none;
+    margin: 10px 0;
+}
+
+/* Noto Sans KR 폰트 추가 */
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+.menu {
+    margin: 0 170px;
+    display: flex;
+    justify-content: fiex-start;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    transition: color 0.3s;
+    margin-right: 35px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu a.active {
+    text-decoration: underline;
+    /* 활성화된 링크에 밑줄 추가 */
+}
+
+내비게이션 버튼 스타일
+.nav-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nav-button:hover {
+    color: #65508B;
+}
+
+.nav-button next-button {
+    margin-right: 10px;
+}
+
+#currentMonth {
+    font-size: 22px;
+}
+
+.writer-button {
+    background-color: #ffffff;
+    color: #65508B;
+    border: 3px solid #65508B;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.writer-button:hover {
+    background-color: #65508B;
+    color: white;
+}
+
+.calendar {
+    width: 940px;
+    margin: 50px auto; 
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.main {
+    width: 940px;
+    height: 730px;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.nav-btn.go-prev,
+.nav-btn.go-next {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.year-month {
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+}
+
+.days {
+    display: flex;
+    justify-content: space-between; 
+    width: 940px; 
+    margin: 0 0 10px;
+}
+
+.day {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.dates {
+    display: flex;
+    flex-flow: row wrap;
+    height: 730px;
+    width: 940px;
+    border-top: 0.5px solid #333333;
+    border-right: 0.5px solid #333333;
+}
+
+.date {
+    width: calc(100% / 7);
+    padding: 15px;
+    text-align: left;
+    border-bottom: 0.5px solid #333333;
+    border-left: 0.5px solid #333333;
+}
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+    color: #D13E3E;
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+    color: #396EE2;
+}
+
+.other {
+    color: #bdbdbd;
+}
+
+
+
+
+
+
+
+
+
+/* 독후감 작성 (팝업) */
+/* 모달 창의 전체 배경 */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(39, 17, 56, 0.8); 
+}
+
+
+/* 모달 창의 내용 */
+.modal-content {
+    background-color: #F5F5F5;
+    margin: 15% auto; 
+    padding: 10px 40px;
+    width: 1240px;
+    height: 900px;
+    border-radius: 10px; 
+    position: relative;
+}
+
+.whiteBoard {
+    padding: 30px 40px;
+}
+
+/* 모달 닫기 버튼 */
+.close {
+    color: #333;
+    float: right;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 공개/비공개 설정 */
+.visibility-options {
+    margin-top: 20px;
+    margin-bottom: 30px; 
+}
+
+#private {
+    margin-left: 30px;
+}
+
+/* 책 검색과 오늘의 기분을 같은 줄에 배치하는 컨테이너 */
+.book-mood-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px; 
+}
+
+/* 책 검색 섹션 */
+.book-search-container {
+    position: relative;
+    width: 300px;
+    height: 40px; 
+}
+
+/* 책 검색 입력 필드 */
+.book-search-input {
+    width: 100%; 
+    height: 100%;
+    padding: 8px 70px 8px 10px; 
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd; 
+    border-radius: 5px;
+}
+
+/* 검색 버튼 */
+.book-search-btn {
+    position: absolute;
+    top: 50%;
+    right: 5px; 
+    transform: translateY(-50%);
+    padding: 10px 20px; 
+    background-color: #fcfcfc00;
+    color: #C4B2CE;
+    border: 1px solid #C4B2CE;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 80%; 
+    font-size: 16px;
+    box-sizing: border-box;
+    line-height: 80%; 
+    text-align: center; 
+}
+
+/* 책 검색 섹션 */
+.book-search-container {
+    position: relative;
+    width: 300px;
+    height: 40px; 
+}
+
+/* 책 검색 입력 필드 */
+.book-search-input {
+    width: 100%; 
+    padding: 8px 70px 8px 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd; 
+    border-radius: 5px;
+}
+
+.book-search-btn:hover {
+    background-color: rgba(196, 178, 206, 0.3); 
+}
+
+/* 오늘의 기분 선택 섹션 */
+.mood-container {
+    position: relative; /* 드롭다운의 위치를 정확하게 설정하기 위해 필요 */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;  
+}
+
+.mood-label {
+    margin-right: 10px;
+}
+
+.mood-selector {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.mood-dropdown {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    gap: 10px; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+
+
+.mood-option {
+    width: 55px;
+    height: 55px; 
+    object-fit: contain; 
+    cursor: pointer;
+}
+
+/* 제목 입력 */
+.title-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 25px;
+}
+
+.title-text-field {
+    width: 100%;
+    padding: 10px;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    font-size: 22px;
+    color: #333;
+}
+
+.title-input:focus {
+    outline: none; 
+}
+
+/* 날짜 선택 */
+.date-container {
+    margin-bottom: 25px; 
+}
+
+.date-label {
+    margin-right: 10px;
+}
+
+.date-field {
+    padding: 10px;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    font-size: 16px;
+    color: #333;
+}
+
+.content-input {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    resize: none;
+    height: 200px; 
+}
+
+/* 모달의 버튼을 오른쪽 아래에 위치시키기 위한 스타일 */
+.modal-footer {
+    margin-top: auto; 
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+/* 저장 버튼 스타일 */
+#saveBtn {
+    width: 115px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f9d1d100; 
+    color: #C4B2CE; 
+    border: 3px solid #C4B2CE;
+    margin-right: 20px;
+    margin-top: 200px;
+}
+
+#saveBtn:hover {
+    background-color: rgba(227, 200, 242, 0.3);
+}
+
+/* 삭제 버튼 스타일 */
+#deleteBtn {
+    width: 115px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f9d1d100; 
+    color: #DBA7C2; 
+    border: 3px solid #DBA7C2;
+    margin-top: 200px;
+}
+
+#deleteBtn:hover {
+    background-color: rgba(219, 167, 194, 0.15);
+}
+
+/* (달력)데이터 받은 값 */
+/* .titlereview {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #65508B;
+    background-color: #FAE0D7;
+    color: #333333;
+    font-size: 12px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 5px; 
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 관심등록 */
+.book-list {
+    text-align: center;
+    margin: 0 170px;
+}
+
+.book-list-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.book-list-header h2 {
+    margin: 0; 
+    font-size: 24px; 
+}
+
+.book-list-header .edit {
+    background-color: #65508B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 58px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 0; 
+}
+
+.book-card {
+    flex: 0 0 calc(20% - 20px); 
+    box-sizing: border-box; 
+    padding: 10px; 
+    overflow: hidden; 
+    
+}
+
+.book-card img {
+    width: 180px; 
+    height: auto; 
+}
+
+/* 선택된 책 이미지 오버레이 */
+.book-card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    position: relative;
+    cursor: pointer;
+}
+
+.book-card img {
+    width: 100%; /* 이미지 크기 조정 */
+    height: auto;
+    object-fit: cover;
+}
+
+.book-card p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* 기본 상태의 전체 권수 */
+#bookLabel {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* 편집 모드에서 적용할 스타일 */
+.edit-mode #bookLabel .select-all {
+    color: #333333;
+    font-size: 16px;
+}
+
+/* 편집 모드에서만 오버레이와 삭제 아이콘이 표시되도록 수정 */
+.edit-mode .book-card.selected {
+    position: relative;
+    background-color: rgb(216, 218, 219); 
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23333333' d='M14.28 2a2 2 0 0 1 1.897 1.368L16.72 5H20a1 1 0 1 1 0 2l-.003.071l-.867 12.143A3 3 0 0 1 16.138 22H7.862a3 3 0 0 1-2.992-2.786L4.003 7.07L4 7a1 1 0 0 1 0-2h3.28l.543-1.632A2 2 0 0 1 9.721 2zM9 10a1 1 0 0 0-.993.883L8 11v6a1 1 0 0 0 1.993.117L10 17v-6a1 1 0 0 0-1-1m6 0a1 1 0 0 0-1 1v6a1 1 0 1 0 2 0v-6a1 1 0 0 0-1-1m-.72-6H9.72l-.333 1h5.226z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 70px 70px;
+    background-position: center 180px; 
+    background-repeat: no-repeat; 
+    border: 1px solid #333333;
+}
+
+/* 편집 모드에서 선택된 카드 이미지의 반투명 처리 */
+.edit-mode .book-card.selected img {
+    opacity: 0.7;
+}
+
+/* 삭제 및 취소 버튼을 숨김 상태로 설정 */
+.edit-actions {
+    display: none; 
+    margin-top: 20px; 
+}
+
+.edit-actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px; 
+}
+
+.more-btn {
+    width: 115px;
+    height: 50px;
+    margin: 10px;
+    margin-top: 70px;
+    font-weight: 300px;
+    float: center;
+    font-size: 16px;
+    background-color: #65508B;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* 버튼 스타일 */
+
+.delete {
+    background-color: #C4B2CE; 
+    color: white;
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
+    margin: 30px auto;
+    margin-right: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: #65508B;
+    color: white;
+}
+
+.cancel {
+    background-color: #C4B2CE; 
+    color: white;
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: #65508B;
+    color: white;
+}
+
+/* editButtons 스타일 */
+#editButtons {
+    display: none; /* 기본적으로 숨김 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 회원수정 */
+
+.wrap {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 1240px;
+    margin: 80px auto;
+    margin-bottom: 140px;
+}
+
+.joinNickNam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-right: -60px;
+}
+
+.joinId input[type="text"],
+.joinName input[type="text"] {
+    border: 2px solid #BFB6CF;
+    border-radius: 4px;
+}
+
+.input:not(input[type="button"]),
+input:not([type="submit"]) {
+    border: 2px solid #65508B;
+    border-radius: 5px;
+    padding: 15px;
+    color: #65508B;
+}
+
+.joinFrm,
+.noMem,
+div[class*=Info] {
+    width: 43%;
+    margin: 0 auto;
+}
+
+div[class^="join"] {
+    margin-bottom: 27px;
+}
+
+b {
+    font: 12px;
+    width: 20%;
+    display: inline-block;
+    margin-right: 50px;
+
+}
+
+div[class^="join"] input:not(input[type="button"]),
+form[class^="find"] {
+    width: 50%;
+    height: 40px;
+}
+
+div[class^="join"] input[type="button"] {
+    margin-left: 5%;
+}
+
+input[type="button"] {
+    padding: 12px 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid;
+    background-color: #BFB6CF;
+}
+
+input[type="button"]:hover {
+    background-color: #65508B;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.joinPhone {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.inputhint {
+    margin-bottom: 5px;
+    color: #bebebe;
+    font-size: 14px;
+    text-align: center;
+    margin-left: -40px;
+}
+
+
+/* 회원탈퇴 버튼 스타일 (글씨만 보이게) */
+.deleteButton {
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding: 12px 0;
+    cursor: pointer;
+    display: block;
+    margin-left: 25px;
+}
+
+/* 버튼들을 입력 필드와 같은 위치에 배치 */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.submitButton {
+    padding: 12px 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid;
+    background-color: #BFB6CF;
+    width: 50%;
+    margin-right: -60px;
+    align-self: center;
+}
+
+.submitButton:hover {
+    background-color: #65508B;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 회원탈퇴 버튼 호버 효과 */
+.deleteButton:hover {
+    color: #333333;
+    text-decoration: underline;
+}
