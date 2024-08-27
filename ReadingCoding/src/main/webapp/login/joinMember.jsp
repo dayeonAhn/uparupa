@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="/resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="/resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="/resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="/resources/style/logStyle.css">  <!-- 의연 -->
+   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
+   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
+	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
+	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 	<script>
 	    //joinMember
 	    function validateForm(form){
@@ -61,9 +61,9 @@
 	
 	<div id="wrap">
 	
-	    <div class="indexImg"><img src="/resources/images/LogoAxlot.png" alt="logoImg"></div>
+	    <div class="indexImg"><img src="../resources/images/LogoAxlot.png" alt="logoImg"></div>
 	    
-		<form class="joinFrm" action="/joinMem.do" method="post" onsubmit="return validateForm(this)">
+		<form class="joinFrm" action="joinMem.do" method="post" onsubmit="return validateForm(this)">
 		
 		<div class="joinId">
 	        <b>아이디</b>

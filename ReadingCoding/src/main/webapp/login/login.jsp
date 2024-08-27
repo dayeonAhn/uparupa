@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="/resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="/resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="/resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="/resources/style/logStyle.css">  <!-- 의연 -->
+   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
+   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
+	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
+	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 	<script>
 	    // Login
 	    function valForm(form){
@@ -29,9 +29,9 @@
 </head>
 <body>
 	<div id="wrap">
-        <div class="indexImg"><img src="/resources/images/LogoAxlot.png" alt="logoImg"></div>
+        <div class="indexImg"><img src="../resources/images/LogoAxlot.png" alt="logoImg"></div>
 
-        <form class="loginFrm" action="/login/login.do" method="post" onsubmit="return valForm(this)">
+        <form class="loginFrm" action="login/login.do" method="post" onsubmit="return valForm(this)">
             <input type="text" class="joinId" id="joinId" name="joinId" placeholder="아이디를 입력해주세요"/>
             <input type="password" class="joinPwd" id="joinPwd" name="joinPwd" placeholder="비밀번호를 입력해주세요"/>
             <div>
@@ -47,7 +47,7 @@
             <button type="button"><a href="#">카카오톡으로 로그인하기</a></button>
         </div>
         <span class="noMem">
-            <a href="/login/joinMember.do">회원이 아니신가요?</a>
+            <a href="login/joinMember.do">회원이 아니신가요?</a>
         </span>
     </div>
 </body>

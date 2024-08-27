@@ -1,0 +1,730 @@
+@charset "UTF-8";
+/* 다연 css */
+* {margin : 0; padding : 0; box-sizing : border-box;}
+img {width : 100%}
+/* all set */
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.BookSearchContent {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    margin-top: 79px;
+    margin-bottom: 52px;
+}
+
+.BookSearchListTop {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px;
+}
+/* 제목*/
+.BookSearchListTop .bookpagetitle {
+    font-size: 20px;
+    font-style: bold;
+    margin-left: 44px;
+    font-weight:bold;
+}
+
+.BookSearchListTop {
+	display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 30px;
+    width: 1240px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+    position: relative;
+}
+.bookpagetitle{
+  position: absolute; 
+    top: 0;
+}
+
+
+
+/* 드롭바스 */
+.dropdown-el {
+    min-width: 153px;
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    min-height: 40px;
+    max-height: 40px;
+    overflow: hidden;
+    top: 0.5em;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #333333;
+    outline: none;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    background-color: #ffffff;
+     
+  }
+  
+  .BookSearchListTop .dropdown-el {
+    margin-left: auto;
+    margin-right: 10px;
+}
+  
+  .dropdown-el input:focus + label {
+    background: #def;
+  }
+  
+  .dropdown-el input {
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.01;
+  }
+  
+  .dropdown-el label {
+    border-top: 1px solid #bebebe;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 12px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 35px; 
+    box-sizing: border-box; 
+  }
+  
+  .dropdown-el label:nth-child(2) {
+    margin-top: 40px;
+    border-top: 1px solid #d9d9d9;
+  }
+  
+  .dropdown-el input:checked + label {
+    display: block;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .dropdown-el input:checked + label:nth-child(2) {
+    margin-top: 0;
+    position: relative;
+  }
+  
+  .dropdown-el::after {
+  
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px; 
+    background: url('../images/arrow_down.png') no-repeat center center;
+    background-size: contain;
+    transition: var(--timing) all ease-in-out;
+  }
+  
+
+  .dropdown-el.expanded {
+    border: 0.06em solid #bebebe;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    max-height: 15em;
+  }
+  
+  .dropdown-el.expanded label:hover {
+    background-color: rgba(190, 190, 190, 0.1);
+  }
+  
+
+  .dropdown-el.expanded::after {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+  /* select drop box 끝 */
+
+
+
+
+/* 도서리스트 */
+
+.BookContentList {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1240px; 
+    margin: 0 auto; 
+}
+.BookContent {
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1264px;
+    height: 192px;
+}
+
+.bookimg {
+    flex: 0 0 100px; 
+    margin-right: 34px;
+    margin-left: 44px;
+}
+
+.bookimg img {
+    width: 100%;
+    height: auto;
+}
+
+.bookDetails {
+
+/*     justify-content: center;  */
+    align-items: flex-start;
+}
+
+.bookTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+}
+
+.bookTitle a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.bookDetails ul {
+	list-style-type:none;
+	color:16px;
+}
+
+.bookInfo {
+
+    font-size: 16px;
+    color: #4E4E4E;
+    margin-right:auto;
+    
+}
+
+.bookinfo{
+	margin-right:auto;
+	text-align: left;
+	width:400px
+}
+
+.bookInfoCom {
+	margin-left:80px;
+}
+
+.bookInfoCom ul{
+	list-style-type:none;
+}
+.bookInfoCom ul {
+	margin-top: 35px;
+}
+
+.debookTitle a{
+	font-size:20px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #333333;
+}
+
+.bookInfoCom ul li{
+	color: #4E4E4E;
+}
+
+.bookstar {
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: 40px;
+}
+
+.Line {
+	border: 1px solid #BEBEBE;
+	width:1064px;
+}
+
+.bookstar img {
+    width: 40px; 
+    height: 40px;
+}
+
+.no-bookresults {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4E4E4E;
+  padding-top: 60px;
+  padding-bottom: 139px;
+}
+
+.BookSearchListTop, .BookContentList{
+	position: absolute; 
+}
+.BookSearchListTop{
+	z-index: 200; 
+}
+.BookContentList{
+	z-index: 100;
+	margin-top:30px;
+}
+
+
+
+/* ///////////////////책 상세 ////////////////*/
+
+.line {
+  width: 1240px;
+  margin:0 auto;
+  border: 1px solid #4e4e4e;
+}
+#bookver2{
+  margin: 0 auto;
+  margin-top:70px;
+  margin-bottom:70px;
+}
+.debookimg {
+	margin-left:130px;
+}
+.bookfullinfo h3 {
+	margin-left:130px;
+}
+
+.bookstory , .bookstroyreport{
+  padding: 50px 130px;
+}
+
+.BookContent {
+  position: relative; 
+  display: flex;
+}
+
+.bookstar2 {
+  position: absolute; 
+  bottom: 20px; 
+  right: 10px; 
+}
+
+.bookstar2 img {
+  width: 120px;
+  height: auto;
+}
+
+.star-icon2 {
+  width: 30px;
+  height: 30px;
+  cursor: pointer; 
+}
+
+/* 독후감 */
+.bookstroyreport h3{
+  padding-bottom: 30px;
+  color: #333333;
+}
+
+.bookstroyreport p{
+  padding-bottom: 60px;
+  color: #BDBDBD;
+}
+
+.bookreport {
+  position: relative;
+  margin-bottom: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  
+  background-color: #ffffff;
+  box-shadow: -1px 1px 10px rgba(190, 190, 190, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.bookreport .bookname {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  padding-left: 21px;
+  text-align: left;
+  width: 100%; 
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+}
+
+.bookreportcontainer {
+  font-weight: bold;
+  width: 100%;
+  height: 167px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin-top: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.bookreportcontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.bookreportconent {
+  position: absolute;
+  z-index: 1;
+  font-size: 16px;
+  color: #333333;
+  text-align: left; 
+  width: 90%; 
+  padding-left: 21px; 
+}
+
+.debookTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333333;
+  text-align: left; 
+  padding-left: 21px; 
+  width: 100%; 
+}
+
+.bookpub {
+  display: block;
+  text-align: left; 
+  margin-top: 5px; 
+  font-weight: normal;
+  color: #4E4E4E;
+  width: 100%; 
+}
+
+
+
+
+
+
+/* //////////채팅 준비화면 /////////////*/
+
+.chatcon {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 79px;
+  margin-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.toktokcontainer {
+  width: 407px;
+  height: 195px;
+  border: 3px solid #65508B;
+  border-radius: 10px;
+  margin-top: 58px;
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.toktokcontainer:hover {
+    background-color: #F0E8F5;
+}
+
+.toktokcontainer2 {
+  width: 407px;
+  height: 195px;
+  border: 3px solid #65508B;
+  border-radius: 10px;
+  margin-top: 58px;
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.toktokcontainer2:hover {
+    background-color: #65508B;
+    color: #FFFFFF;
+}
+.usertoknotice {
+  width: 591px;
+  height: 195px;
+  border-radius: 10px;
+  background-color: rgba(190, 190, 190, 0.3);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 20px; 
+}
+
+.noticeleft {
+  width: 40%; 
+  color: #333333;
+}
+.noticeright{
+  width: 60%;
+}
+
+.noticeleft {
+  text-align: center;
+  color: #333333;
+}
+
+.noticeright {
+  text-align: left;
+  color: #333333;
+}
+.noticeright h3{
+  padding-bottom: 21px;
+  font-size: 20px;
+}
+.noticeright p {
+  font-size: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+/*///////////////// 관리자 페이지 - 회원 독후감 리스트///////// */
+
+.adminbookcontainer {
+  width: 1049px;
+  margin: 0 auto;
+  margin-top: 68px;
+}
+
+.adminbookcontainer .bookreport-title {
+  font-size: 20px;
+  font-weight:bold;
+  margin-bottom: 38px;
+}
+
+.tablemenu {
+  margin: 0 auto;
+}
+.adminLine {
+  border: 1px solid #B4B3AE;
+  width: 1049px;
+  margin: 0 auto;
+}
+
+.bookreport-title{
+  padding-left: 47px; 
+}
+
+.checkboxmenu , .bookreportcheckbox{
+  width: 47px;
+  align-items: center;
+}
+
+.nummenu, .bookreportnumber {
+  width: 68px;
+  align-items: center;
+  text-align: center;
+}
+
+.titlemenu{
+  width: 487px;
+  align-items: center;
+  text-align: center;
+}
+
+.bookreporttitle {
+  width: 487px;
+}
+
+.authormenu, .bookreportauthor {
+  width: 154px;
+  align-items: center;
+  text-align: center;
+}
+
+.postdatemenu, .bookreportdate {
+  width: 179px;
+  align-items: center;
+  text-align: center;
+}
+
+.viewsmenu, .bookreportviews {
+  width: 114px;
+  align-items: center;
+  text-align: center;
+}
+.headermenu {
+  margin-bottom: 17px;
+}
+
+.bookreportitem {
+  margin: 11px auto;
+}
+
+.adminbookreportbuttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.adminbookdelete-button {
+  border: 2px solid #655189; 
+  background-color: #fff; 
+  width: 66px; 
+  height: 30px;
+  color: #655189;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px;
+  width: 1049px;
+  margin: 0 auto;
+}
+
+.pagination {
+  flex-grow: 1;
+  text-align: center; 
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none; 
+  color: #000; 
+}
+
+.adminbookreportbuttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.adminbookdelete-button {
+  border: 1px solid #655189; 
+  background-color: #fff; 
+  width: 66px; 
+  height: 30px;
+  color: #655189; 
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////독후감 상세 ////////////////*/
+.adminbookreportCon {
+  margin: 0 auto;
+  width: 1049px;
+}
+
+.adminbookreporttitle {
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 47px;
+  margin-bottom: 78px;
+  margin-top: 72px;
+}
+
+.adminbookreporttitleS {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 22px;
+}
+
+.adimin-userinfo {
+  margin: 25px 22px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.admindate, .adminviews {
+  color: #BDBDBD;
+}
+
+.admincontent {
+  margin: 38px 22px;
+}
+.adminbuttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.adminback-button, .admindelete-button {
+  border: 2px solid #655189;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #655189;
+  font-weight: bold;
+  width: 66px;
+  height: 30px;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-right: 18px;
+}
+
+.adminback-button:hover, .admindelete-button:hover{
+  background-color: #655189;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
