@@ -62,7 +62,7 @@
 	}
 	
 	div[class^="join"] input[type="button"]{
-	    margin-left: 5%;
+	    margin-left: 10px;
 	}
 	
 	div[class^="join"] span{
