@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-   	<link rel="stylesheet" href="/resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="/resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="/resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="/resources/style/logStyle.css">  <!-- 의연 -->
+   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
+   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
+	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
+	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -100,20 +100,26 @@
     $("#tab3").removeClass("is_on");
 })
 </script>
-
+<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
 	<div id="wrap">
         <div class="tab_menu">
             <div class="tabImg">
                 <div id="tab_1" class="tabImg is_on">
-                    <img src="/resources/images/bookTab1.jpg" alt="tabImg1">
+                    <img src="../resources/images/bookTab1.jpg" alt="tabImg1">
                 </div>
                 <div id="tab_2" class="tabImg">
-                    <img src="/resources/images/bookTab2.jpg" alt="tabImg2">
+                    <img src="../resources/images/bookTab2.jpg" alt="tabImg2">
                 </div>
                 <div id="tab_3" class="tabImg">
-                    <img src="/resources/images/bookTab3.jpg" alt="tabImg3">
+                    <img src="../resources/images/bookTab3.jpg" alt="tabImg3">
                 </div>
             </div>
             <ul class="list">
@@ -188,7 +194,7 @@
     </div>
 
 
-    
+    <jsp:include page="../footer.jsp"></jsp:include>
 
 </body>
 </html>

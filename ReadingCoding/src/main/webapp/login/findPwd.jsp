@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="/resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="/resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="/resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="/resources/style/logStyle.css">  <!-- 의연 -->
+   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
+   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
+	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
+	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 <script>
 //findPwd
     function findPwdForm(form){
@@ -33,13 +33,13 @@
 </head>
 <body>
 	<div id="wrap">
-        <div class="indexImg"><img src="/resources/images/LogoAxlot.png" alt="logoImg"></div>
+        <div class="indexImg"><img src="../resources/images/LogoAxlot.png" alt="logoImg"></div>
         <div class="findInfo">
             <h2>비밀번호 찾기</h2>
             <span>회원가입 시 등록했던 정보를 입력해주세요</span>
         </div>
 
-	<form class="findPwdFrm" action="/login/findPwd.do" method="post" onsubmit="return findPwdForm(this)">
+	<form class="findPwdFrm" action="login/findPwd.do" method="post" onsubmit="return findPwdForm(this)">
         <div class="findPwd">
             <b>아이디</b>
             <input type="text" class="findId" id="findId" name="findId" placeholder="아이디를 입력해주세요"/>

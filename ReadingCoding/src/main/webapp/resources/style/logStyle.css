@@ -1,3 +1,4 @@
+	@charset "UTF-8";
 	*{padding: 0; margin: 0; box-sizing: border-box;}
 	
 	#wrap{ width: 1240px; margin: 0 auto; margin-bottom: 140px;}
@@ -259,16 +260,16 @@
 	form[action="deleteMember.do"] table tbody tr td:first-of-type{
 	    width: 5%;
 	}
-	/* 아이디 */
+	/* �븘�씠�뵒 */
 	form[action="deleteMember.do"] table thead tr th:nth-of-type(2),
 	form[action="deleteMember.do"] table tbody tr td:nth-of-type(2),
-	/* 닉네임 */
+	/* �땳�꽕�엫 */
 	form[action="deleteMember.do"] table thead tr th:nth-of-type(4),
 	form[action="deleteMember.do"] table tbody tr td:nth-of-type(4),
-	/* 이메일 */
+	/* �씠硫붿씪 */
 	form[action="deleteMember.do"] table thead tr th:nth-last-of-type(3),
 	form[action="deleteMember.do"] table thead tr td:nth-last-of-type(3),
-	/* 전화번호 */
+	/* �쟾�솕踰덊샇 */
 	form[action="deleteMember.do"] table thead tr th:nth-last-of-type(4),
 	form[action="deleteMember.do"] table thead tr td:nth-last-of-type(4){
 	    width: 15%; 
