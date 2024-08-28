@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/resources/style/temp.css">
+    <link rel="stylesheet" href="resources/style/temp.css">
     <title>관리자 메인페이지</title>
 </head>
 <body>
@@ -46,34 +46,34 @@
             <div class="grid-container">
                 <!-- 3x3 그리드 구성 -->
                 <div class="grid-item" data-image="/resources/images/dragon_book.png" data-text="흑막용을 키우게 되었다">
-                    <img src="/resources/images/dragon_book.png" alt="Image 1">
+                    <img src="resources/images/dragon_book.png" alt="Image 1">
                     <p>흑막용을 키우게 되었다</p>
                 </div>
                 <div class="grid-item" data-image="/resources/images/dragon_book.png" data-text="흑막용을 키우게 되었다">
-                    <img src="/resources/images/dragon_book.png" alt="Image 2">
+                    <img src="resources/images/dragon_book.png" alt="Image 2">
                     <p>흑막용을 키우게 되었다</p>
                 </div>
                 <div class="grid-item" data-image="/resources/images/dragon_book.png" data-text="흑막용을 키우게 되었다">
-                    <img src="/resources/images/dragon_book.png" alt="Image 3">
+                    <img src="resources/images/dragon_book.png" alt="Image 3">
                     <p>흑막용을 키우게 되었다</p>
                 </div>
                 <div class="grid-item" data-image="/resources/images/coding_book.png" data-text="세상에서 가장 쉬운 코딩책">
-                    <img src="/resources/images/coding_book.png" alt="Image 4">
+                    <img src="resources/images/coding_book.png" alt="Image 4">
                     <p>세상에서 가장 쉬운 코딩책</p>                </div>
                 <div class="grid-item" data-image="/resources/images/coding_book.png" data-text="세상에서 가장 쉬운 코딩책">
-                    <img src="/resources/images/coding_book.png" alt="Image 5">
+                    <img src="resources/images/coding_book.png" alt="Image 5">
                     <p>세상에서 가장 쉬운 코딩책</p>                </div>
                 <div class="grid-item" data-image="/resources/images/coding_book.png" data-text="세상에서 가장 쉬운 코딩책">
-                    <img src="/resources/images/coding_book.png" alt="Image 6">
+                    <img src="resources/images/coding_book.png" alt="Image 6">
                     <p>세상에서 가장 쉬운 코딩책</p>                </div>
                 <div class="grid-item" data-image="/resources/images/lost_thing_book.png" data-text="분실물이 돌아왔습니다">
-                    <img src="/resources/images/lost_thing_book.png" alt="Image 7">
+                    <img src="resources/images/lost_thing_book.png" alt="Image 7">
                     <p>분실물이 돌아왔습니다</p>                </div>
                 <div class="grid-item" data-image="/resources/images/lost_thing_book.png" data-text="분실물이 돌아왔습니다">
-                    <img src="/resources/images/lost_thing_book.png" alt="Image 8">
+                    <img src="resources/images/lost_thing_book.png" alt="Image 8">
                     <p>분실물이 돌아왔습니다</p>                </div>
                 <div class="grid-item" data-image="/resources/images/lost_thing_book.png" data-text="분실물이 돌아왔습니다">
-                    <img src="/resources/images/lost_thing_book.png" alt="Image 9">
+                    <img src="resources/images/lost_thing_book.png" alt="Image 9">
                     <p>분실물이 돌아왔습니다</p>                </div>
             </div>
 
@@ -98,6 +98,6 @@
 	</div>
 	
 	<jsp:include page="./footer.jsp"></jsp:include>
-    <script src="/resources/script/adminmainMngPage.js"></script>
+    <script src="resources/script/adminmainMngPage.js"></script>
 </body>
 </html>

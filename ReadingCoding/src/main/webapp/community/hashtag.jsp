@@ -6,10 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티 리스트</title>
-   <link rel="stylesheet" href="/resources/style/com.css">
-    <script src="/resources/script/com.js"></script>
+   <link rel="stylesheet" href="../resources/style/com.css">
+   <link rel="stylesheet" href="../resources/style/temp.css"> 
+    <script src="../resources/script/com.js"></script>
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
     <div class="container">
         <!-- 상단 바 -->
         <div class="top-bar">
@@ -55,7 +62,7 @@
                 <div class="comment-count">댓글(1)</div>
                 <div class="straight-line">|</div>
                 <div class="likes-count">
-                    <img id="likeImage" src="/resources/images/heart1.png" alt="하트" class="like-image-custom">
+                    <img id="likeImage" src="../resources/images/heart1.png" alt="하트" class="like-image-custom">
                     <span>23</span>
                 </div>
             </div>
@@ -63,5 +70,7 @@
         <div class="more">+더보기</div>
         <!-- 커뮤니티 리스트 내용이 들어갈 부분 -->
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

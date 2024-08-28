@@ -827,3 +827,8 @@ input[type="button"]:hover {
     color: #333333;
     text-decoration: underline;
 }
+
+/* 헤더와 거리 */
+.nickname-container{
+	margin-top:25px;
+}

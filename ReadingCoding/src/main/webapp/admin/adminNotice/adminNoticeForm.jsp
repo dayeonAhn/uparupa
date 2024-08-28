@@ -6,9 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 작성</title>
-    <link rel="stylesheet" href="/resources/style/com.css">
+    <link rel="stylesheet" href="../../resources/style/com.css">
+   
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--재성 -->
+	
 </head>
 <body>
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
     <div class="container">
         <!-- 제목 입력 필드 -->
         <input type="text" id="title-input" class="title-input" placeholder="제목을 입력해 주세요">
@@ -24,5 +28,7 @@
             <button class="list-button" onclick="window.location.href='adminNotice.jsp'">목록</button>
         </div>
     </div>
+    
+    <jsp:include page="../../footer.jsp"></jsp:include>
 </body>
 </html>

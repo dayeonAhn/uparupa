@@ -7,6 +7,7 @@ img {width : 100%}
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
+    padding-bottom: 150px;
 }
 
 .BookSearchContent {
@@ -15,6 +16,7 @@ body {
     padding: 0 20px; 
     margin-top: 79px;
     margin-bottom: 52px;
+    padding-bottom: 150px;
 }
 
 .BookSearchListTop {
@@ -185,8 +187,6 @@ body {
 }
 
 .bookDetails {
-
-/*     justify-content: center;  */
     align-items: flex-start;
 }
 
@@ -610,7 +610,7 @@ body {
   color: #333;
 }
 
-.container {
+.BScontainer {
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -710,6 +710,7 @@ body {
   background-color: #655189;
   color: #fff;
 }
+
 
 
 

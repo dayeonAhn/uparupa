@@ -3,21 +3,37 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서 검색</title>
     <link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="../resources/script/BookSearchEvent.js" charset="UTF-8"></script> -->
     
+    
+    <link rel="stylesheet" href="../resources/style/temp.css"> 
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    
 </head>
 <body>
-    <input id="bookName" type="text" placeholder="도서명을 입력하세요">
-    <button id="search">검색</button>
+
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
+    
+    
+    
+    
+
+
+
+<!--     <input id="bookName" type="text" placeholder="도서명을 입력하세요">
+    <button id="search">검색</button> -->
     
     <div class="BookSearchContent">
         <div class="BookSearchListTop">
@@ -56,14 +72,19 @@
                   
             </div>
             <hr>
-        </div>
-        
-        
-
-        <div class="PageingNum">
-            <!-- <a>< 1 2 3 4 5 ></a> -->
+            <div class="PageingNum">
+           		<!-- <a>< 1 2 3 4 5 ></a> -->
+        	</div>
         </div>
     </div>
+    
+    
+    
+    
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
+    
+    
     <script>
     $('.dropdown-el').click(function(e) {
         e.preventDefault();
@@ -90,6 +111,10 @@
             });
         });
     </script>
+    
+    
+    
+    
 
 </body>
 </html>

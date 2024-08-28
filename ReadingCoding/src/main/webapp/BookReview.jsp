@@ -7,10 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 서재 - 캘린더 및 독후감 작성</title>
-    <link rel="stylesheet" href="resources/style/BookReview.css">
-</head>
+	<link rel="stylesheet" href="resources/style/BookReview.css">
+	<link rel="stylesheet" href="resources/style/temp.css">
+	</head>
 
 <body>
+
+	<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="./header.jsp"></jsp:include>
+
+
     <div class="nickname-container">
         <div>
             <img src="resources/images/프로필 사진.png" alt="profile" class="profile-image">
@@ -25,7 +35,7 @@
         <a href="BookReview.jsp">독서기록</a>
         <a href="MyPage/interestBook.jsp">관심등록</a>
         <a href="MyPage/updateMember.jsp">회원수정</a>
-        <a href="">1:1 고객문의</a>
+        <a href="webChat/UserChatpage.jsp">1:1 고객문의</a>
     </div>
 
     <!-- 캘린더 입력값 -->
@@ -127,7 +137,54 @@
             </div>
         </div>
 
+        <jsp:include page="footer.jsp"></jsp:include>
+
+     
         <script src="resources/script/BookReview.js"></script>
+        <script>
+        function btnClick(element) {
+            const categorylist = document.getElementById('category-list');
+            const category = document.getElementById('category');
+            
+            const icon = element.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+            
+            if(categorylist.style.display === 'block') {
+                categorylist.style.display = 'none';
+                category.style.color = '#FFFFFF'; /* 기본 색상으로 변경 */
+                category.style.background = 'none'; /* 배경색 기본으로 변경 */
+                
+            } else {
+                categorylist.style.display = 'block';
+                category.style.color = 'var(--maincolor)'; /* 글자색을 --maincolor로 변경 */
+                category.style.background = '#FFFFFF'; /* 배경색을 흰색으로 변경 */
+            }
+        }
+        document.querySelector('category').addEventListener('click', function() {
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </body>
 
 </html>

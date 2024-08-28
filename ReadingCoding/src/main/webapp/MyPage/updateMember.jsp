@@ -83,9 +83,18 @@
             }
         }
     </script>
+    
+    <link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 </head>
 
 <body>
+
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
     <div class="nickname-container">
         <div>
             <img src="../resources/images/프로필 사진.png" alt="profile" class="profile-image">
@@ -97,10 +106,10 @@
     <hr class="divider">
 
     <div class="menu">
-        <a href="BookReview.jsp">독서기록</a>
+        <a href="../BookReview.jsp">독서기록</a>
         <a href="interestBook.jsp">관심등록</a>
         <a href="updateMember.jsp">회원수정</a>
-        <a href="">1:1 고객문의</a>
+        <a href="../webChat/UserChatpage.jsp">1:1 고객문의</a>
     </div>
 
     <div class="wrap">
@@ -151,6 +160,8 @@
                 <button class="deleteButton" type="button" onclick="return confirmDeletion();">회원탈퇴</button>
             </div>
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 
 </html>

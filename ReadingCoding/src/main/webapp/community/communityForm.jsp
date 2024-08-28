@@ -6,9 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티 작성</title>
-   <link rel="stylesheet" href="/resources/style/com.css">
+   <link rel="stylesheet" href="../resources/style/com.css">
+   <link rel="stylesheet" href="../resources/style/temp.css"> 
 </head>
 <body>
+
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
     <div class="container">
         <!-- 제목 입력 필드 -->
         <input type="text" id="title-input" class="com-title-input" placeholder="제목을 입력해 주세요">
@@ -30,5 +38,7 @@
             <button class="com-community-submit-button" onclick="window.location.href='community.jsp'">게시글 등록</button>
         </div>
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

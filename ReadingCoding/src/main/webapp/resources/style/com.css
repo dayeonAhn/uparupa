@@ -31,9 +31,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
-button {
-    width: 116px; /* 버튼 너비 설정 */
-    height: 40px; /* 버튼 높이 설정 */
+/* button {
+    width: 116px; 버튼 너비 설정
+    height: 40px; 버튼 높이 설정
     font-weight: 600;
     font-size: 20px;
     border-radius: 10px;
@@ -42,14 +42,14 @@ button {
     border: 2px solid #EF7EB0;
     cursor: pointer;
     box-sizing: border-box;
-    position: relative; /* 상단바에서 위치를 조정하기 위한 상대적 위치 */
-    margin-left: auto; /* 오른쪽 끝으로 정렬 */
+    position: relative; 상단바에서 위치를 조정하기 위한 상대적 위치
+    margin-left: auto; 오른쪽 끝으로 정렬
 }
 
 button:hover {
     background-color: #EF7EB0;
     color: white;
-}
+} */
 
 /* 상단 바 스타일 */
 .top-bar {

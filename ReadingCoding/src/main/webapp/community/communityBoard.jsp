@@ -6,10 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티 글 상세페이지</title>
-   	<link rel="stylesheet" href="/resources/style/com.css">
-    <script src="/resources/script/com.js"></script>
+   	<link rel="stylesheet" href="../resources/style/com.css">
+    <script src="../resources/script/com.js"></script>
+    
+    <link rel="stylesheet" href="../resources/style/temp.css"> 
 </head>
 <body>
+	<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
+
     <div class="container">
         
     <!-- <button class="report-btn-custom">신고하기</button>-->
@@ -22,7 +31,7 @@
             <div class="post-header-custom">
                 <h1 class="post-title-custom">혹시 로맨스 소설 추천 해주실 수 있을까요?</h1>
                 <div class="profile-info-custom">
-                    <img src="/resources/images/kitty.jpg" alt="프로필 사진" class="profile-image-custom">
+                    <img src="../resources/images/kitty.jpg" alt="프로필 사진" class="profile-image-custom">
                     <div class="author-info-custom">
                         <div class="author-name-custom">채유니</div>
                         <div class="post-date-custom">2024.08.10</div>
@@ -46,7 +55,7 @@
             <div class="post-stats-custom">
                 <span class="views-comments-custom">조회수 7 | 댓글(1개)</span>
                 <div class="like">
-                    <img id="likeImage" src="/resources/images/heart1.png" alt="하트" class="like-image-custom">
+                    <img id="likeImage" src="../resources/images/heart1.png" alt="하트" class="like-image-custom">
                     <span class="likes-custom">좋아요</span>
                 </div>
             </div>
@@ -56,7 +65,7 @@
             <!-- 댓글 섹션 -->
             <div class="comment-section-custom">
                 <div class="comment-author-info-custom">
-                    <img src="/resources/images/kitty.jpg" alt="프로필 사진" class="comment-profile-image-custom">
+                    <img src="../resources/images/kitty.jpg" alt="프로필 사진" class="comment-profile-image-custom">
                     <div class="comment-author-name-custom">유미니</div>
                     <div class="comment-date-custom">2024.08.10</div>
                 </div>
@@ -81,5 +90,7 @@
 
         </div>
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

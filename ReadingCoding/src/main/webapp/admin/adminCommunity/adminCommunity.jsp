@@ -6,9 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티 리스트</title>
-   <link rel="stylesheet" href="/resources/style/com.css">
+   <link rel="stylesheet" href="../../resources/style/com.css">
+   
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--재성 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
     <div class="container">
         <!-- 상단 바 -->
         <div class="top-bar">
@@ -99,5 +104,7 @@
             <a href="#">&gt;</a>
         </div>
     </div>
+    
+    <jsp:include page="../../footer.jsp"></jsp:include>
 </body>
 </html>

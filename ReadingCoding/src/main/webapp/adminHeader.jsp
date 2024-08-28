@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<style>
+   <style>
         :root {
             --maincolor: #007FC7;
         }
@@ -17,26 +17,26 @@
 </head>
 <body>
     <header>
-    	<div class="sign">
-    		<div class="signtext" >
-    			<a href="#">로그아웃</a>
-    			</div>
-    	</div>
+       <div class="mainPage-sign">
+          <div class="mainPage-signtext" >
+             <a href="${pageContext.request.contextPath}/login/login.jsp">로그아웃</a>
+             </div>
+       </div>
         <!-- 메뉴 영역 -->
         <div>
-            <div class="menu-container default">
-                <div class="menu">
-                    <a href="/admin/admin/community/list.jsp">신고내역</a>
-                    <a href="/admin/adminwebChat/adminChatlist.jsp ">문의답변</a>
-                    <a href="/admin/report/getReportList.jsp ">독서기록</a>
+            <div class="mainPage-menu-container default">
+                <div class="mainPage-menu">
+                    <a href="#">신고내역</a>
+                    <a href="${pageContext.request.contextPath}/admin/adminwebChat/adminChatpage.jsp ">문의답변</a>
+                    <a href="${pageContext.request.contextPath}/admin/report/getReportList.jsp ">독서기록</a>
                 </div>
-                <div class="headerlogo">
-                    <img src="/resources/images/uparuLogo.png" alt="로고"> <!-- 로고 이미지 경로를 수정하세요 -->
+                <div class="mainPage-headerlogo">
+                    <img src="${pageContext.request.contextPath}/resources/images/uparuLogo.png" alt="로고"> <!-- 로고 이미지 경로를 수정하세요 -->
                 </div>
-                <div class="menu">
-                    <a href="/admin/adminmember/memberList.jsp">회원관리</a>
-                    <a href="/admin/admin/community/list.jsp ">커뮤니티</a>
-                    <a href="/admin/admin/notice/list.jsp">공지사항</a>
+                <div class="mainPage-menu">
+                    <a href="${pageContext.request.contextPath}/admin/memberList.jsp">회원관리</a>
+                    <a href="${pageContext.request.contextPath}/admin/adminCommunity/adminCommunity.jsp ">커뮤니티</a>
+                    <a href="${pageContext.request.contextPath}/admin/adminNotice/adminNotice.jsp">공지사항</a>
                 </div>
             </div>
         </div>
@@ -44,55 +44,71 @@
         <!-- GNB 영역 -->
         <div class="gnb-background">
             <div class="gnb default">
-            	
-                <div id="category" class="category" onclick="btnClick(this)">
-                    <div class='category-icon'>
-                    	<i class="fa fa-bars"></i>
+               
+                <div id="mainPage-category" class="mainPage-category" onclick="btnClick(this)">
+                    <div class='mainPage-category-icon'>
+                       <i class="fa fa-bars"></i>
                     </div>
-                    <div class='category-text'>
-                    	<span>카테고리</span>
+                    <div class='mainPage-category-text'>
+                       <span>카테고리</span>
                     </div>
                 </div>
-                <div class="search">
+                <div class="mainPage-search">
                     <input type="text" placeholder="검색어를 입력하세요">
                     <a href="#">
-                    	<i class="fa fa-search"></i>
+                       <i class="fa fa-search"></i>
                     </a>
                 </div>
             </div>
-            <div id="category-list" class="category-list">
-		    <div class="category-frame">
-		        
-		        
-				<div class="category-box">역사, 지리, 관광</div>
-				
-				<div class="category-box">자연과학</div>
-				
-				<div class="category-box">사회과학</div>
-				
-				<div class="category-box">기술과학</div>
-				
-				<div class="category-box">문학</div>
-				
-				<div class="category-box">언어</div>
-				
-				<div class="category-box">예술</div>
-				
-				<div class="category-box">철학, 심리학, 윤리학</div>
-		        
-		    </div>
-		</div>
+            <div id="mainPage-category-list" class="mainPage-category-list">
+          <div class="mainPage-category-frame">
+              
+              
+            <a href="#">
+                <div class="mainPage-category-box">역사, 지리, 관광</div>
+            </a>
+         
+            <a href="#">
+                <div class="mainPage-category-box">자연과학</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">사회과학</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">기술과학</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">문학</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">언어</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">예술</div>
+            </a>
+            
+            <a href="#">
+                <div class="mainPage-category-box">철학, 심리학, 윤리학</div>
+            </a>
+              
+          </div>
+      </div>
         </div>
 
         <!-- Category list 영역 -->
-		
+      
 
     </header>
 
     <script>
         function btnClick(element) {
-            const categorylist = document.getElementById('category-list');
-            const category = document.getElementById('category');
+            const categorylist = document.getElementById('mainPage-category-list');
+            const category = document.getElementById('mainPage-category');
             
             const icon = element.querySelector('i');
             icon.classList.toggle('fa-bars');
@@ -109,7 +125,7 @@
                 category.style.background = '#FFFFFF'; /* 배경색을 흰색으로 변경 */
             }
         }
-        document.querySelector('category').addEventListener('click', function() {
+        document.querySelector('mainPage-category').addEventListener('click', function() {
             this.querySelector('i').classList.toggle('fa-bars');
             this.querySelector('i').classList.toggle('fa-times');
         });

@@ -6,10 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
-    <link rel="stylesheet" href="/resources/style/com.css">
+    <link rel="stylesheet" href="../../resources/style/com.css">
+   
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--재성 -->
+	
 </head>
 <body>
-
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
     <div class="container">
         <h1 class="notice-title">공지사항</h1>
 
@@ -81,6 +84,6 @@
             <a href="#">&gt;</a>
         </div>
     </div>
-
+	<jsp:include page="../../footer.jsp"></jsp:include>
 </body>
 </html>

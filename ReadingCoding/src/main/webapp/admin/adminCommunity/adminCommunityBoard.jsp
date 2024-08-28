@@ -6,10 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 상세</title>
-   <link rel="stylesheet" href="/resources/style/com.css">
+   <link rel="stylesheet" href="../../resources/style/com.css">
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--재성 -->
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
     <div class="container">
         <div class="admin-notice-title">혹시 로맨스 소설 추천 해주실 수 있을까요?</div>
         <div class="meta-info">
@@ -40,5 +42,6 @@
         </div>
         <hr class="line">
     </div>
+    <jsp:include page="../../footer.jsp"></jsp:include>
 </body>
 </html>

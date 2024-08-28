@@ -5,13 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
 	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
 	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 </head>
 <body>
+
+<jsp:include page="../adminHeader.jsp"></jsp:include>
     <div id="wrap">
         <h2 class="memberMngList">회원 관리 목록</h2>
         <form action="deleteMember.do" method="post">
@@ -59,5 +58,7 @@
     </div>
     </div>
     
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
