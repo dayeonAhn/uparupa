@@ -1,3 +1,27 @@
+// 프로필 이미지를 클릭하면 파일 선택 창이 열림
+document.getElementById('profileImage').addEventListener('click', function() {
+  document.getElementById('imageUpload').click();
+});
+
+// 파일이 선택되면 프로필 이미지가 변경됨
+document.getElementById('imageUpload').addEventListener('change', function() {
+  const file = this.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          document.getElementById('profileImage').setAttribute('src', e.target.result);
+      }
+      reader.readAsDataURL(file);
+  }
+});
+
+
+
+
+
+
+
+
 // 현재 날짜를 포함한 Date 객체를 생성합니다.
 let date = new Date();
 
@@ -105,38 +129,42 @@ function closeReviewModal() {
 function selectMood(imagePath) {
   var selectedMoodImage = document.getElementById('selectedMoodImage');
   if (imagePath) {
-    selectedMoodImage.src = imagePath; // 선택된 이미지 경로로 변경
-    selectedMoodImage.style.width = '55px'; // 크기 설정
-    selectedMoodImage.style.height = '55px'; // 높이 설정 (이미지 비율에 맞게 조정)
-    selectedMoodImage.style.display = 'block'; // 이미지를 보이도록 설정
+      selectedMoodImage.src = imagePath; // 선택된 이미지 경로로 변경
+      selectedMoodImage.style.width = '55px'; // 크기 설정
+      selectedMoodImage.style.height = '55px'; // 높이 설정 (이미지 비율에 맞게 조정)
+      selectedMoodImage.style.display = 'block'; // 이미지를 보이도록 설정
   } else {
-    selectedMoodImage.style.display = 'none'; // 빈 공간처럼 보이도록 숨김
+      selectedMoodImage.style.display = 'none'; // 빈 공간처럼 보이도록 숨김
   }
   // 드롭다운을 닫습니다.
   toggleMoodDropdown(false); 
 }
 
 // 드롭다운 토글 함수
-function toggleMoodDropdown(show) {
+function toggleMoodDropdown(event) {
   var moodDropdown = document.getElementById('moodDropdown');
   
-  if (typeof show === 'undefined') {
-    // 기본 토글 동작
-    if (moodDropdown.style.display === 'none' || moodDropdown.style.display === '') {
-        moodDropdown.style.display = 'grid'; // 드롭다운 열기
-    } else {
-        moodDropdown.style.display = 'none'; // 드롭다운 닫기
-    }
+  // 드롭다운을 열거나 닫기
+  if (moodDropdown.style.display === 'none' || moodDropdown.style.display === '') {
+      moodDropdown.style.display = 'grid'; // 드롭다운 열기
   } else {
-    // show 매개변수를 사용하여 드롭다운의 표시 상태를 설정
-    moodDropdown.style.display = show ? 'grid' : 'none'; // 'grid'로 표시
+      moodDropdown.style.display = 'none'; // 드롭다운 닫기
   }
+  
+  // 이벤트 버블링 방지
+  event.stopPropagation();
 }
 
-// 드롭다운을 클릭하여 열거나 닫기 위한 이벤트 핸들러
-document.querySelector('.mood-selector').addEventListener('click', function() {
-  toggleMoodDropdown(); // 드롭다운 열기/닫기
+// 클릭 시 드롭다운 외부를 클릭하면 드롭다운이 닫히도록 설정
+document.addEventListener('click', function(event) {
+  var moodDropdown = document.getElementById('moodDropdown');
+  var moodSelector = document.querySelector('.mood-selector');
+  if (!moodSelector.contains(event.target) && !moodDropdown.contains(event.target)) {
+      moodDropdown.style.display = 'none';
+  }
 });
+
+
 
 
 // 저장 버튼 클릭 시
