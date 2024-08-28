@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ä¿¹Â´ÏÆ¼ ±Û »ó¼¼ÆäÀÌÁö</title>
+    <title>ì»¤ë®¤ë‹ˆí‹° ê¸€ ìƒì„¸íŽ˜ì´ì§€</title>
    	<link rel="stylesheet" href="../resources/style/com.css">
     <script src="../resources/script/com.js"></script>
     
@@ -19,21 +19,23 @@
     </style>
     <jsp:include page="../header.jsp"></jsp:include>
 
-    <div class="container">
+
+    <div class="com-container">
+
         
-    <!-- <button class="report-btn-custom">½Å°íÇÏ±â</button>-->
-        <!-- °Ô½Ã±Û ¹Ú½º -->
+    <!-- <button class="report-btn-custom">ì‹ ê³ í•˜ê¸°</button>-->
+        <!-- ê²Œì‹œê¸€ ë°•ìŠ¤ -->
         <div class="post-box-custom">
-            <!-- ½Å°íÇÏ±â ¹öÆ° -->
+            <!-- ì‹ ê³ í•˜ê¸° ë²„íŠ¼ -->
             
 
-            <!-- Á¦¸ñ ¹× »ó´Ü Á¤º¸ -->
+            <!-- ì œëª© ë° ìƒë‹¨ ì •ë³´ -->
             <div class="post-header-custom">
-                <h1 class="post-title-custom">È¤½Ã ·Î¸Ç½º ¼Ò¼³ ÃßÃµ ÇØÁÖ½Ç ¼ö ÀÖÀ»±î¿ä?</h1>
+                <h1 class="post-title-custom">í˜¹ì‹œ ë¡œë§¨ìŠ¤ ì†Œì„¤ ì¶”ì²œ í•´ì£¼ì‹¤ ìˆ˜ ìžˆì„ê¹Œìš”?</h1>
                 <div class="profile-info-custom">
-                    <img src="../resources/images/kitty.jpg" alt="ÇÁ·ÎÇÊ »çÁø" class="profile-image-custom">
+                    <img src="../resources/images/kitty.jpg" alt="í”„ë¡œí•„ ì‚¬ì§„" class="profile-image-custom">
                     <div class="author-info-custom">
-                        <div class="author-name-custom">Ã¤À¯´Ï</div>
+                        <div class="author-name-custom">ì±„ìœ ë‹ˆ</div>
                         <div class="post-date-custom">2024.08.10</div>
                     </div>
                 </div>
@@ -41,52 +43,52 @@
             
             <hr class="divider-custom">
 
-            <!-- ³»¿ë -->
+            <!-- ë‚´ìš© -->
             <div class="post-content-custom">
-                ÃßÃµÇØÁÖ¼¼¿ä
+                ì¶”ì²œí•´ì£¼ì„¸ìš”
             </div>
             
-            <!-- ÇØ½ÃÅÂ±× -->
+            <!-- í•´ì‹œíƒœê·¸ -->
             <div class="post-tags-custom">
-                <a href="hashtag.jsp"><span class="tag-custom">#µ¶¼­¸ÀÁý</span></a>
+                <a href="hashtag.jsp"><span class="tag-custom">#ë…ì„œë§›ì§‘</span></a>
             </div>
             <hr class="divider-custom">
-            <!-- Á¶È¸¼ö, ´ñ±Û, ÁÁ¾Æ¿ä -->
+            <!-- ì¡°íšŒìˆ˜, ëŒ“ê¸€, ì¢‹ì•„ìš” -->
             <div class="post-stats-custom">
-                <span class="views-comments-custom">Á¶È¸¼ö 7 | ´ñ±Û(1°³)</span>
+                <span class="views-comments-custom">ì¡°íšŒìˆ˜ 7 | ëŒ“ê¸€(1ê°œ)</span>
                 <div class="like">
-                    <img id="likeImage" src="../resources/images/heart1.png" alt="ÇÏÆ®" class="like-image-custom">
-                    <span class="likes-custom">ÁÁ¾Æ¿ä</span>
+                    <img id="likeImage" src="../resources/images/heart1.png" alt="í•˜íŠ¸" class="like-image-custom">
+                    <span class="likes-custom">ì¢‹ì•„ìš”</span>
                 </div>
             </div>
 
             <hr class="divider-custom">
 
-            <!-- ´ñ±Û ¼½¼Ç -->
+            <!-- ëŒ“ê¸€ ì„¹ì…˜ -->
             <div class="comment-section-custom">
                 <div class="comment-author-info-custom">
-                    <img src="../resources/images/kitty.jpg" alt="ÇÁ·ÎÇÊ »çÁø" class="comment-profile-image-custom">
-                    <div class="comment-author-name-custom">À¯¹Ì´Ï</div>
+                    <img src="../resources/images/kitty.jpg" alt="í”„ë¡œí•„ ì‚¬ì§„" class="comment-profile-image-custom">
+                    <div class="comment-author-name-custom">ìœ ë¯¸ë‹ˆ</div>
                     <div class="comment-date-custom">2024.08.10</div>
                 </div>
                 <div class="comment-buttons-custom">
-                    <div class="comment-content-custom">½Ã¸¥µð ? ³»°¡ ¿Ö ?</div>
+                    <div class="comment-content-custom">ì‹œë¥¸ë”” ? ë‚´ê°€ ì™œ ?</div>
                     <div>
-                        <button class="comment-edit-btn-custom">¼öÁ¤</button>
-                        <button class="comment-delete-btn-custom">»èÁ¦</button>
+                        <button class="comment-edit-btn-custom">ìˆ˜ì •</button>
+                        <button class="comment-delete-btn-custom">ì‚­ì œ</button>
                     </div>
                 </div>
             </div>
             
-            <!-- ´ñ±Û ÀÛ¼º -->
+            <!-- ëŒ“ê¸€ ìž‘ì„± -->
             <div class="comment-write-box-custom">
-                <textarea class="comment-write-input-custom" placeholder="´ä±ÛÀ» ÀÛ¼ºÇÏ¼¼¿ä"></textarea>
-                <button class="comment-submit-btn-custom">µî·Ï</button>
+                <textarea class="comment-write-input-custom" placeholder="ë‹µê¸€ì„ ìž‘ì„±í•˜ì„¸ìš”"></textarea>
+                <button class="comment-submit-btn-custom">ë“±ë¡</button>
             </div>
             
             <hr class="divider-custom">
 
-            <button class="back-button-custom" onclick="window.location.href='community.jsp'">¸ñ·Ï</button>
+            <button class="back-button-custom" onclick="window.location.href='community.jsp'">ëª©ë¡</button>
 
         </div>
     </div>

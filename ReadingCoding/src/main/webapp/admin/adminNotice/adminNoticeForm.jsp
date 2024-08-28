@@ -5,27 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>°øÁö»çÇ× ÀÛ¼º</title>
+    <title>ê³µì§€ì‚¬í•­ ìž‘ì„±</title>
     <link rel="stylesheet" href="../../resources/style/com.css">
    
-   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--Àç¼º -->
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--ìž¬ì„± -->
 	
 </head>
 <body>
-<jsp:include page="../../adminHeader.jsp"></jsp:include>
-    <div class="container">
-        <!-- Á¦¸ñ ÀÔ·Â ÇÊµå -->
-        <input type="text" id="title-input" class="title-input" placeholder="Á¦¸ñÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä">
-        <hr class="line-1">
 
-        <!-- ³»¿ë ÀÔ·Â ÇÊµå -->
-        <textarea id="content-input" class="content-input" placeholder="³»¿ëÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä"></textarea>
-        <hr class="line-2">
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
+    <div class="com-container">
+        <!-- ì œëª© ìž…ë ¥ í•„ë“œ -->
+        <input type="text" id="title-input" class="title-input" placeholder="ì œëª©ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”">
+        <hr class="cline-1">
+
+        <!-- ë‚´ìš© ìž…ë ¥ í•„ë“œ -->
+        <textarea id="content-input" class="content-input" placeholder="ë‚´ìš©ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”"></textarea>
+        <hr class="cline-2">
         
-        <!-- ¹öÆ°µéÀ» °¨½Î´Â div Ãß°¡ -->
+        <!-- ë²„íŠ¼ë“¤ì„ ê°ì‹¸ëŠ” div ì¶”ê°€ -->
         <div class="button-container">
-            <button class="submit-button" onclick="window.location.href='adminNotice.jsp'">ÀÛ¼º</button>
-            <button class="list-button" onclick="window.location.href='adminNotice.jsp'">¸ñ·Ï</button>
+            <button class="submit-button" onclick="window.location.href='adminNotice.jsp'">ìž‘ì„±</button>
+            <button class="list-button" onclick="window.location.href='adminNotice.jsp'">ëª©ë¡</button>
         </div>
     </div>
     

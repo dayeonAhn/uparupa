@@ -5,42 +5,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>°øÁö»çÇ× »ó¼¼</title>
+    <title>ê³µì§€ì‚¬í•­ ìƒì„¸</title>
    <link rel="stylesheet" href="../../resources/style/com.css">
-   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--Àç¼º -->
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--ìž¬ì„± -->
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
+
 <jsp:include page="../../adminHeader.jsp"></jsp:include>
-    <div class="container">
-        <div class="admin-notice-title">È¤½Ã ·Î¸Ç½º ¼Ò¼³ ÃßÃµ ÇØÁÖ½Ç ¼ö ÀÖÀ»±î¿ä?</div>
+    <div class="com-container">
+
+        <div class="admin-notice-title">í˜¹ì‹œ ë¡œë§¨ìŠ¤ ì†Œì„¤ ì¶”ì²œ í•´ì£¼ì‹¤ ìˆ˜ ìžˆì„ê¹Œìš”?</div>
         <div class="meta-info">
-            <span class="author">Ã¤À¯´Ï</span>
+            <span class="author">ì±„ìœ ë‹ˆ</span>
             <span class="date">2024.08.10</span>
-            <span class="views">Á¶È¸¼ö 7</span>
+            <span class="views">ì¡°íšŒìˆ˜ 7</span>
             <div class="buttons">
-                <button class="back-button" onclick="window.location.href='adminCommunity.jsp'">¸ñ·Ï</button>
-                <button class="comment-delete-button">»èÁ¦</button>
+                <button class="back-button" onclick="window.location.href='adminCommunity.jsp'">ëª©ë¡</button>
+                <button class="comment-delete-button">ì‚­ì œ</button>
             </div>
         </div>        
-        <hr class="line">
+        <hr class="cline">
         <div class="content">
-            °øÁö»çÇ×ÀÔ´Ï´Ù.
+            ê³µì§€ì‚¬í•­ìž…ë‹ˆë‹¤.
         </div>
-        <hr class="line">
-        <div class="comment-count">´ñ±Û(1°³)</div>
-        <hr class="line">
+        <hr class="cline">
+        <div class="comment-count">ëŒ“ê¸€(1ê°œ)</div>
+        <hr class="cline">
         <div class="comment-section-custom">
             <div class="comment-author-info-custom">
-                <div class="comment-author-name-custom">À¯¹Ì´Ï</div>
+                <div class="comment-author-name-custom">ìœ ë¯¸ë‹ˆ</div>
                 <div class="comment-date-custom">2024.08.10</div>
             </div>
             <div class="comment-buttons-custom">
-                <div class="comment-content-custom">½Ã¸¥µð ? ³»°¡ ¿Ö ?</div>
-                <button class="comment-delete-button">»èÁ¦</button>
+                <div class="comment-content-custom">ì‹œë¥¸ë”” ? ë‚´ê°€ ì™œ ?</div>
+                <button class="comment-delete-button">ì‚­ì œ</button>
             </div>
         </div>
-        <hr class="line">
+        <hr class="cline">
     </div>
     <jsp:include page="../../footer.jsp"></jsp:include>
 </body>
