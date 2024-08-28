@@ -9,7 +9,7 @@
 
 body {
     background-color: #ffffff;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .profile-image {
@@ -826,9 +826,4 @@ input[type="button"]:hover {
 .deleteButton:hover {
     color: #333333;
     text-decoration: underline;
-}
-
-/* 헤더와 거리 */
-.nickname-container{
-	margin-top:25px;
 }

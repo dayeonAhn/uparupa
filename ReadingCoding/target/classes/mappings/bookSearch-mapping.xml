@@ -4,16 +4,16 @@
 
 <mapper namespace="BookSearchRepository">
 
-    <!-- 도서 정보 저장 -->
+<!--     도서 정보 저장
     <insert id="insertBook" parameterType="org.rc.uparupa.booksearch.BookDTO">
         INSERT INTO books (title, authors, translators, publisher, postdate, thumbnail, contents)
         VALUES (#{title}, #{authors}, #{translators}, #{publisher}, #{postdate}, #{thumbnail}, #{contents})
     </insert>
 
-    <!-- 도서 정보 조회 -->
+    도서 정보 조회
     <select id="selectBookById" parameterType="int" resultType="org.rc.uparupa.booksearch.BookDTO">
         SELECT * FROM books WHERE id = #{id}
-    </select>
+    </select> -->
 
 </mapper>
    

@@ -17,7 +17,8 @@ img {width : 100%}
 
 /* header */
 header {
-    margin: 0;
+    margin: 0; 
+    margin-bottom: 80px;
     font-family: Noto Sans;
 }
 
@@ -87,12 +88,11 @@ header .gnb-background {
 
 header .gnb-background .gnb {
     width: 100%;
-    max-width: 1240px; /* 최대 너비 1440px */
-    height: 50px;
+    width: 1240px; height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between; /* 좌우 간격 균등 배분 */
-    position: relative; /* 자식 요소의 절대 위치 설정을 위해 relative로 설정 */
+    position: relative; /* 자식 요소의 절대 위치 설정을 위해 relative로 설정 */ 
 }
 
 header .gnb .mainPage-category {                        /* 폰트가 안먹힘 */
@@ -167,8 +167,7 @@ header .mainPage-category-list {
     top: 0%; /* GNB 바로 아래에 위치 */
     left: 0; /* GNB와 같은 왼쪽 위치 */
     right: 0;
-    width: calc(100% - 200px); 
-   max-width: 1440px;
+    width: 1240px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
     z-index: 1000; /* GNB 위에 표시 */
     margin: 0 auto;
@@ -178,7 +177,7 @@ header .mainPage-category-list {
 
 /* CSS Code */
 header .mainPage-category-frame {
-   width: calc(100% - 200px); 
+   width: 100%; 
    max-width: 1240px;
    height: 253px;
    position: relative;

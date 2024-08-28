@@ -5,10 +5,7 @@
     <meta charset="utf-8">
     <title>도서관 위치</title>
     <link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
 	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 </head>
 <body>
 <style>
