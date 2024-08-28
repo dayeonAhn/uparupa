@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>д©╧б╢оф╪ юш╪╨</title>
+    <title>Л╩╓К╝╓К▀┬М▀╟ Л·▒Л└╠</title>
    <link rel="stylesheet" href="../resources/style/com.css">
    <link rel="stylesheet" href="../resources/style/temp.css"> 
 </head>
@@ -17,25 +17,26 @@
         }
     </style>
     <jsp:include page="../header.jsp"></jsp:include>
-    <div class="container">
-        <!-- а╕╦Я ют╥б гй╣Е -->
-        <input type="text" id="title-input" class="com-title-input" placeholder="а╕╦Яю╩ ют╥бгь аж╪╪©Д">
+    <div class="com-container">
 
-        <!-- Ё╩©К ют╥б гй╣Е -->
+        <!-- Л═°К╙╘ Л·┘К═╔ М∙└К⌠° -->
+        <input type="text" id="title-input" class="com-title-input" placeholder="Л═°К╙╘Л²└ Л·┘К═╔М∙╢ Лё╪Л└╦Л ■">
+
+        <!-- К┌╢Л ╘ Л·┘К═╔ М∙└К⌠° -->
         <div class="com-content-wrapper">
-            <textarea id="content-input" class="com-content-input" placeholder="Ё╩©Кю╩ ют╥бгь аж╪╪©Д"></textarea>
-            <div class="com-content-info">0/10000юз</div>
+            <textarea id="content-input" class="com-content-input" placeholder="К┌╢Л ╘Л²└ Л·┘К═╔М∙╢ Лё╪Л└╦Л ■"></textarea>
+            <div class="com-content-info">0/10000Л·░</div>
         </div>
 
-        <!-- гь╫цеб╠в ют╥б гй╣Е -->
+        <!-- М∙╢Л▀°М┐°Й╥╦ Л·┘К═╔ М∙└К⌠° -->
         <div class="com-hashtag-section">
-            <label for="hashtag-input" class="com-hashtag-label">#гь╫цеб╠в ют╥б</label>
-            <input type="text" id="hashtag-input" class="com-hashtag-input" placeholder="#ют╥б (цж╢К 5╟Ё)">
+            <label for="hashtag-input" class="com-hashtag-label">#М∙╢Л▀°М┐°Й╥╦ Л·┘К═╔</label>
+            <input type="text" id="hashtag-input" class="com-hashtag-input" placeholder="#Л·┘К═╔ (Л╣°К▄─ 5Й╟°)">
         </div>
         
-        <!-- ╧Жф╟╣Ию╩ ╟╗╫н╢б div цъ╟║ -->
+        <!-- К╡└М┼╪К⌠╓Л²└ Й╟░Л▀╦К┼■ div Л╤■Й╟─ -->
         <div class="com-button-container">
-            <button class="com-community-submit-button" onclick="window.location.href='community.jsp'">╟т╫ц╠ш ╣Н╥о</button>
+            <button class="com-community-submit-button" onclick="window.location.href='community.jsp'">Й╡▄Л▀°Й╦─ К⌠╠К║²</button>
         </div>
     </div>
     

@@ -5,57 +5,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ä¿¹Â´ÏÆ¼ ¸®½ºÆ®</title>
+    <title>ì»¤ë®¤ë‹ˆí‹° ë¦¬ìŠ¤íŠ¸</title>
    <link rel="stylesheet" href="../../resources/style/com.css">
    
-   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--Àç¼º -->
+   <link rel="stylesheet" href="../../resources/style/temp.css"> <!--ìž¬ì„± -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 <jsp:include page="../../adminHeader.jsp"></jsp:include>
-    <div class="container">
-        <!-- »ó´Ü ¹Ù -->
+    <div class="com-container">
+        <!-- ìƒë‹¨ ë°” -->
         <div class="top-bar">
-            <!-- ÆäÀÌÁö Á¦¸ñ -->
-            <div class="community-title">Ä¿¹Â´ÏÆ¼</div>
+            <!-- íŽ˜ì´ì§€ ì œëª© -->
+            <div class="community-title">ì»¤ë®¤ë‹ˆí‹°</div>
 
-            <!-- Á¤·Ä ¼ø¼­ ¼±ÅÃ ¸Þ´º -->
+            <!-- ì •ë ¬ ìˆœì„œ ì„ íƒ ë©”ë‰´ -->
             <div class="sort-menu">
                 <select id="sort-options" class="sort-select">
-                    <option value="latest">ÃÖ½Å¼ø</option>
-                    <option value="views">Á¶È¸¼ö¼ø</option>
+                    <option value="latest">ìµœì‹ ìˆœ</option>
+                    <option value="views">ì¡°íšŒìˆ˜ìˆœ</option>
                 </select>
             </div>
 
-            <!-- °Ë»öÃ¢°ú ¼±ÅÃÃ¢À» °¨½Î´Â ÄÁÅ×ÀÌ³Ê -->
+            <!-- ê²€ìƒ‰ì°½ê³¼ ì„ íƒì°½ì„ ê°ì‹¸ëŠ” ì»¨í…Œì´ë„ˆ -->
             <div class="search-container custom-border">
                 <select id="search-category" class="search-select custom-input-border">
-                    <option value="title">Á¦¸ñ</option>
-                    <option value="content">³»¿ë</option>
+                    <option value="title">ì œëª©</option>
+                    <option value="content">ë‚´ìš©</option>
                 </select>
-                <input type="text" id="search-input" class="search-input custom-input-border" placeholder="°Ë»ö¾î ÀÔ·Â">
+                <input type="text" id="search-input" class="search-input custom-input-border" placeholder="ê²€ìƒ‰ì–´ ìž…ë ¥">
             </div>
         </div>
 
-        <!-- Ä¿¹Â´ÏÆ¼ ¸®½ºÆ® -->
+        <!-- ì»¤ë®¤ë‹ˆí‹° ë¦¬ìŠ¤íŠ¸ -->
         <div class="community-list">
-            <!-- Á¦¸ñ -->
+            <!-- ì œëª© -->
             <div class="admin-post-header">
                 <input type="checkbox" class="post-checkbox">
-                <span class="post-number">¹øÈ£</span>
-                <span class="com-post-title">Á¦¸ñ</span>
-                <span class="post-author">ÀÛ¼ºÀÚ</span>
-                <span class="post-date">ÀÛ¼ºÀÏÀÚ</span>
-                <span class="post-views">Á¶È¸¼ö</span>
+                <span class="post-number">ë²ˆí˜¸</span>
+                <span class="com-post-title">ì œëª©</span>
+                <span class="post-author">ìž‘ì„±ìž</span>
+                <span class="post-date">ìž‘ì„±ì¼ìž</span>
+                <span class="post-views">ì¡°íšŒìˆ˜</span>
             </div>
 
-            <!-- ±Û Ç×¸ñ -->
+            <!-- ê¸€ í•­ëª© -->
             <div class="post-item">
                 <input type="checkbox" class="post-checkbox">
                 <span class="post-number">1</span>
-                <span class="com-post-title"><a href="adminCommunityBoard.jsp">Ã¹ ¹øÂ° ±ÛÀÇ Á¦¸ñ</a></span>
-                <span class="post-author">ÀÛ¼ºÀÚ1</span>
+                <span class="com-post-title"><a href="adminCommunityBoard.jsp">ì²« ë²ˆì§¸ ê¸€ì˜ ì œëª©</a></span>
+                <span class="post-author">ìž‘ì„±ìž1</span>
                 <span class="post-date">2024-08-01</span>
                 <span class="post-views">123</span>
             </div>
@@ -64,8 +64,8 @@
             <div class="post-item">
                 <input type="checkbox" class="post-checkbox">
                 <span class="post-number">2</span>
-                <span class="com-post-title"><a href="adminCommunityBoard.jsp">µÎ ¹øÂ° ±ÛÀÇ Á¦¸ñ</a></span>
-                <span class="post-author">ÀÛ¼ºÀÚ2</span>
+                <span class="com-post-title"><a href="adminCommunityBoard.jsp">ë‘ ë²ˆì§¸ ê¸€ì˜ ì œëª©</a></span>
+                <span class="post-author">ìž‘ì„±ìž2</span>
                 <span class="post-date">2024-08-02</span>
                 <span class="post-views">234</span>
             </div>
@@ -74,8 +74,8 @@
             <div class="post-item">
                 <input type="checkbox" class="post-checkbox">
                 <span class="post-number">3</span>
-                <span class="com-post-title"><a href="adminCommunityBoard.jsp">¼¼ ¹øÂ° ±ÛÀÇ Á¦¸ñ</a></span>
-                <span class="post-author">ÀÛ¼ºÀÚ3</span>
+                <span class="com-post-title"><a href="adminCommunityBoard.jsp">ì„¸ ë²ˆì§¸ ê¸€ì˜ ì œëª©</a></span>
+                <span class="post-author">ìž‘ì„±ìž3</span>
                 <span class="post-date">2024-08-03</span>
                 <span class="post-views">345</span>
             </div>
@@ -84,15 +84,15 @@
             <div class="post-item">
                 <input type="checkbox" class="post-checkbox">
                 <span class="post-number">4</span>
-                <span class="com-post-title"><a href="adminCommunityBoard.jsp">³× ¹øÂ° ±ÛÀÇ Á¦¸ñ</a></span>
-                <span class="post-author">ÀÛ¼ºÀÚ4</span>
+                <span class="com-post-title"><a href="adminCommunityBoard.jsp">ë„¤ ë²ˆì§¸ ê¸€ì˜ ì œëª©</a></span>
+                <span class="post-author">ìž‘ì„±ìž4</span>
                 <span class="post-date">2024-08-04</span>
                 <span class="post-views">456</span>
             </div>
             <hr>
         </div>
         <div class="buttons">
-            <button class="delete-button">»èÁ¦</button>
+            <button class="delete-button">ì‚­ì œ</button>
         </div>
         <div class="pagination">
             <a href="#">&lt;</a>

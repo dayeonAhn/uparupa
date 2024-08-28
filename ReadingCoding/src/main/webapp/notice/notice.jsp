@@ -17,7 +17,7 @@
     </style>
     <jsp:include page="../header.jsp"></jsp:include>
 
-    <div class="container">
+    <div class="com-container">
         <h1 class="notice-title">공지사항</h1>
 
         <table class="notice-table">
