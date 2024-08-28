@@ -63,7 +63,7 @@
 	
 	    <div class="indexImg"><img src="/resources/images/LogoAxlot.png" alt="logoImg"></div>
 	    
-		<form class="joinFrm" action="/joinMem.do" method="post" onsubmit="return validateForm(this)">
+		<form class="joinFrm" action="/login/joinMember.do" method="post" onsubmit="return validateForm(this)">
 		
 		<div class="joinId">
 	        <b>아이디</b>
@@ -83,7 +83,7 @@
 	
 	    <div class="joinName">
 	        <b>이름</b>
-	        <input type="text" id="joinName" joiName="joinName">
+	        <input type="text" id="joinName" name="joinName">
 	    </div>
 
 	    <div class="joinNickNam">
@@ -101,6 +101,7 @@
 	    <div class="joinEmail">
 	        <b>이메일</b>
 	        <input type="email" name="joinEmail" id="joinEmail">
+	        <input type="button" id="emailCheking" onclick="emaCk()" value="중복확인">
 	    </div>
 	    <input type="submit" value="회원가입 완료">
 					

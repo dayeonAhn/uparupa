@@ -3,19 +3,19 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-			<!-- datasource 설정 -->
+	<!-- datasource 설정 -->
+	<settings>
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
 	<typeAliases>
-		<!-- <typeAlias alias="board" type="org.rc.uparupa.board.BoardVO"/> -->
-		<!-- 각 필요한 VO 연결 -->>
-	</typeAliases>
-	
+		<typeAlias alias="userDTO" type="org.rc.uparupa.LoginMapping.LoginDTO"/>
+	</typeAliases> 
 	
 	
 	
 	<!-- sql mapping 설정 -->
 	<mappers>
-		<!-- <mapper resource="mappings/board-mapping.xml"/> -->
-		<!-- 각 필요한 mapper 연결-> mappings 폴더 안에 만들기 -->>
+		<mapper resource="mapping/login-mapping.xml"/>
+		<!-- 각 필요한 mapper 연결-> mappings 폴더 안에 만들기 -->
 	</mappers>
 </configuration>
-
