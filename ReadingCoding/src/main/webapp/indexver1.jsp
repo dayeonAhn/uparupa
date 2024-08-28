@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p><a href="BookSearchBoard.do">카카오 도서 검색 API</a></p>
+	<p><a href="BookSearchBoard.do">카카오 도서 검색 API 임시이동</a></p>
 </body>
 </html>

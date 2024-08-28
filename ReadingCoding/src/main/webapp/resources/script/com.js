@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (likeImage) {
         likeImage.addEventListener('click', function() {
             const currentSrc = likeImage.getAttribute('src');
-            if (currentSrc === '/resources/images/heart1.png') {
-                likeImage.setAttribute('src', '/resources/images/heart2.png');
+            if (currentSrc === '../../resources/images/heart1.png') {
+                likeImage.setAttribute('src', '../../resources/images/heart2.png');
             } else {
-                likeImage.setAttribute('src', '/resources/images/heart1.png');
+                likeImage.setAttribute('src', '../../resources/images/heart1.png');
             }
         });
     }

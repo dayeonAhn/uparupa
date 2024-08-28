@@ -100,9 +100,15 @@
     $("#tab3").removeClass("is_on");
 })
 </script>
-
+<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
 	<div id="wrap">
         <div class="tab_menu">
             <div class="tabImg">
@@ -188,7 +194,7 @@
     </div>
 
 
-    
+    <jsp:include page="../footer.jsp"></jsp:include>
 
 </body>
 </html>

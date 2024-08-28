@@ -5,62 +5,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ä¿¹Â´ÏÆ¼ ¸®½ºÆ®</title>
-	<link rel="stylesheet" href="/resources/style/com.css">
-    <script src="/resources/script/com.js"></script>
+    <title>ì»¤ë®¤ë‹ˆí‹° ë¦¬ìŠ¤íŠ¸</title>
+	<link rel="stylesheet" href="../resources/style/com.css">
+	<link rel="stylesheet" href="../resources/style/temp.css">
+    <script src="../resources/script/com.js"></script>
+    
+    <link rel="stylesheet" href="../resources/style/temp.css"> 
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
+    
+    
     <div class="com-container">
-        <!-- »ó´Ü ¹Ù -->
-        <div class="top-bar">
-            <!-- ÆäÀÌÁö Á¦¸ñ -->
-            <div class="community-title">Ä¿¹Â´ÏÆ¼</div>
 
-            <!-- Á¤·Ä ¼ø¼­ ¼±ÅÃ ¸Þ´º -->
+        <!-- ìƒë‹¨ ë°” -->
+        <div class="top-bar">
+            <!-- íŽ˜ì´ì§€ ì œëª© -->
+            <div class="community-title">ì»¤ë®¤ë‹ˆí‹°</div>
+
+            <!-- ì •ë ¬ ìˆœì„œ ì„ íƒ ë©”ë‰´ -->
             <div class="sort-menu">
                 <select id="sort-options" class="sort-select">
-                    <option value="latest">ÃÖ½Å¼ø</option>
-                    <option value="views">Á¶È¸¼ö¼ø</option>
+                    <option value="latest">ìµœì‹ ìˆœ</option>
+                    <option value="views">ì¡°íšŒìˆ˜ìˆœ</option>
                 </select>
             </div>
 
-            <!-- °Ë»öÃ¢°ú ¼±ÅÃÃ¢À» °¨½Î´Â ÄÁÅ×ÀÌ³Ê -->
+            <!-- ê²€ìƒ‰ì°½ê³¼ ì„ íƒì°½ì„ ê°ì‹¸ëŠ” ì»¨í…Œì´ë„ˆ -->
             <div class="search-container custom-border">
                 <select id="search-category" class="search-select custom-input-border">
-                    <option value="title">Á¦¸ñ</option>
-                    <option value="content">³»¿ë</option>
+                    <option value="title">ì œëª©</option>
+                    <option value="content">ë‚´ìš©</option>
                 </select>
-                <input type="text" id="search-input" class="search-input custom-input-border" placeholder="°Ë»ö¾î ÀÔ·Â">
+                <input type="text" id="search-input" class="search-input custom-input-border" placeholder="ê²€ìƒ‰ì–´ ìž…ë ¥">
             </div>
 
-            <!-- ±Û¾²±â ¹öÆ° -->
-            <button class="write-button" onclick="window.location.href='communityForm.jsp'">±Û¾²±â</button>
+            <!-- ê¸€ì“°ê¸° ë²„íŠ¼ -->
+            <button class="write-button" onclick="window.location.href='communityForm.jsp'">ê¸€ì“°ê¸°</button>
         </div>
 
         <div class="post-box">
-            <!-- »ó´Ü ¿µ¿ª: ÀÛ¼ºÀÚ ÀÌ¸§°ú Á¶È¸¼ö -->
+            <!-- ìƒë‹¨ ì˜ì—­: ìž‘ì„±ìž ì´ë¦„ê³¼ ì¡°íšŒìˆ˜ -->
             <div class="post-header">
-                <div class="author-name">Ã¤À¯´Ï</div>
-                <div class="view-count">Á¶È¸¼ö 7</div>
+                <div class="author-name">ì±„ìœ ë‹ˆ</div>
+                <div class="view-count">ì¡°íšŒìˆ˜ 7</div>
             </div>
             
-            <!-- Áß°£ ¿µ¿ª: Ä¿¹Â´ÏÆ¼ Á¦¸ñ -->
+            <!-- ì¤‘ê°„ ì˜ì—­: ì»¤ë®¤ë‹ˆí‹° ì œëª© -->
             <div class="post-title">
-                <a href="communityBoard.jsp">·Î¸Ç½º ¼Ò¼³ ÃßÃµ ÇØÁÖ½Ç ¼ö ÀÖÀ»±î¿ä?</a>
+                <a href="communityBoard.jsp">ë¡œë§¨ìŠ¤ ì†Œì„¤ ì¶”ì²œ í•´ì£¼ì‹¤ ìˆ˜ ìžˆì„ê¹Œìš”?</a>
             </div>
             
-            <!-- ÇÏ´Ü ¿µ¿ª: ´ñ±Û ¼ö¿Í ÁÁ¾Æ¿ä ¼ö -->
+            <!-- í•˜ë‹¨ ì˜ì—­: ëŒ“ê¸€ ìˆ˜ì™€ ì¢‹ì•„ìš” ìˆ˜ -->
             <div class="post-footer">
-                <div class="comment-count">´ñ±Û(1)</div>
+                <div class="comment-count">ëŒ“ê¸€(1)</div>
                 <div class="straight-line">|</div>
                 <div class="likes-count">
-                    <img id="likeImage" src="/resources/images/heart1.png" alt="ÇÏÆ®" class="like-image-custom">
+                    <img id="likeImage" src="../resources/images/heart1.png" alt="í•˜íŠ¸" class="like-image-custom">
                     <span>23</span>
                 </div>
             </div>
         </div>
-        <div class="more">+´õº¸±â</div>
-        <!-- Ä¿¹Â´ÏÆ¼ ¸®½ºÆ® ³»¿ëÀÌ µé¾î°¥ ºÎºÐ -->
+        <div class="more">+ë”ë³´ê¸°</div>
+        <!-- ì»¤ë®¤ë‹ˆí‹° ë¦¬ìŠ¤íŠ¸ ë‚´ìš©ì´ ë“¤ì–´ê°ˆ ë¶€ë¶„ -->
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

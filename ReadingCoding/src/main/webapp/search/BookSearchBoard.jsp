@@ -2,21 +2,33 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head>	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서 검색</title>
-    <link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
-	<!-- <link rel="stylesheet" href="../resources/style/logStyle.css">  의연 -->
 
+	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="../resources/script/BookSearchEvent.js" charset="UTF-8"></script> -->
-    
+    <script src="../resources/script/BookSearchEvent.js" ></script>
+    <link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 </head>
 <body>
+
+	<!-- ///////////////////////////// 헤더 ///////////////////////////// -->
+<%-- 	<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include> --%>
+    <!-- ///////////////////////////// 헤더 ///////////////////////////// -->
+    
+    
+    
+    
+    
+    
+    
     <input id="bookName" type="text" placeholder="도서명을 입력하세요">
     <button id="search">검색</button>
     
@@ -32,15 +44,15 @@
         </div>
 		
         <div class="BookContentList">
-            <div class="BookContent">
-                <div class="bookimg"><img src="../resources/images/exBookimg.png"></div>
+            <!-- <div class="BookContent">
+                <div class="bookimg"></div>
                 <div class="bookDetails">
-                    <h3 class="bookTitle"><a href="BookSearch.jsp">어린왕자</a></h3>
+                    <h3 class="bookTitle"></h3>
                     <div class="bookInfo">
-                        <!-- <span class="bookinfo" id="bookauthor"></span>
+                        <span class="bookinfo" id="bookauthor"></span>
                         <span class="bookinfo" id="booktranslators"></span>
                         <span class="bookinfo" id="bookpublisher"></span>
-                        <span class="bookinfo" id="bookdatetime"></span> -->
+                        <span class="bookinfo" id="bookdatetime"></span>
                     	<ul>
                     		<li class="bookinfo">저자 | book.author</li>
                     		<li class="bookinfo">번역 | book.translator</li>
@@ -50,13 +62,13 @@
                     
                     </div>
                 </div>
-                <div class="bookstar" ><!-- style="display: none;" -->
+                <div class="bookstar" style="display: none;" >
                     <img src="../resources/images/bookstar_off.png" alt="Star Rating" class="star-icon">
                 </div>
                 
                   
             </div>
-            <hr>
+            <hr> -->
         </div>
         
         
@@ -65,7 +77,9 @@
             <!-- <a>< 1 2 3 4 5 ></a> -->
         </div>
     </div>
-    <script>
+    
+
+<!--     <script>
     $('.dropdown-el').click(function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -90,7 +104,26 @@
                 console.log("Star status:", $(this).data('star'));
             });
         });
-    </script>
+    </script> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ///////////////////////////// 푸더 ///////////////////////////// -->
+    <footer>
+    <jsp:include page="../footer.jsp"></jsp:include>
+    </footer>
+    <!-- ///////////////////////////// 푸더 ///////////////////////////// -->
+    
+    
+    
+    
 
 </body>
 </html>

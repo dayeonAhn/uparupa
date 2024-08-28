@@ -5,28 +5,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>°øÁö»çÇ× »ó¼¼</title>
-    <link rel="stylesheet" href="/resources/style/com.css">
-    <script src="/resources/script/com.js"></script>
+    <title>ê³µì§€ì‚¬í•­ ìƒì„¸</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="../../resources/style/com.css">
+    <link rel="stylesheet" href="../../resources/style/temp.css"> <!--ìž¬ì„± -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
+
+
+
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
     <div class="com-container">
-        <h1 class="notice-title">°øÁö»çÇ×ÀÔ´Ï´Ù.</h1>
+        <h1 class="notice-title">ê³µì§€ì‚¬í•­ìž…ë‹ˆë‹¤.</h1>
         <div class="meta-info">
-            <span class="author">°ü¸®ÀÚ</span>
+            <span class="author">ê´€ë¦¬ìž</span>
             <span class="date">2024.08.10</span>
-            <span class="views">Á¶È¸¼ö 7</span>
+            <span class="views">ì¡°íšŒìˆ˜ 7</span>
             <div class="buttons">
-                <button class="edit-button">¼öÁ¤</button>
-                <button class="delete-button">»èÁ¦</button>
+                <button class="edit-button">ìˆ˜ì •</button>
+                <button class="delete-button">ì‚­ì œ</button>
             </div>
         </div>        
         <hr class="cline">
         <div class="content">
-            °øÁö»çÇ×ÀÔ´Ï´Ù.
+            ê³µì§€ì‚¬í•­ìž…ë‹ˆë‹¤.
         </div>
         <hr class="cline">
-        <button class="back-button" onclick="window.location.href='adminNotice.jsp'">¸ñ·Ï</button>
+        <button class="back-button" onclick="window.location.href='adminNotice.jsp'">ëª©ë¡</button>
     </div>
+    
+    <jsp:include page="../../footer.jsp"></jsp:include>
 </body>
 </html>

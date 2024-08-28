@@ -6,14 +6,13 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../../resources/style/com.css"> <!-- 채윤 -->
 	<link rel="stylesheet" href="../../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../../resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="../../resources/style/logStyle.css">  <!-- 의연 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
+
+<jsp:include page="../../adminHeader.jsp"></jsp:include>
 	<div class="adminbookreportCon">
         <div class="adminbookreporttitle">
             회원 독후감
@@ -38,6 +37,9 @@
             <button class="admindelete-button">삭제</button>
         </div>
     </div>
+    
+    
+    <jsp:include page="../../footer.jsp"></jsp:include>
 	
 </body>
 </html>
