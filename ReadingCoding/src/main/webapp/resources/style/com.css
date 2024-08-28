@@ -1,0 +1,825 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+img {
+    width: 100%;
+}
+
+/* 怨듯넻 �꽕�젙 */
+body {
+    /* padding: 20px; */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.com-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-bottom: 20px; /* �럹�씠吏��꽕�씠�뀡怨� 踰꾪듉�뱾�씠 諛붽묑�쑝濡� �굹媛��뒗 寃껋쓣 諛⑹� */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+}
+
+/* �긽�떒 諛� �뒪���씪 */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* �슂�냼�뱾 �궗�씠�쓽 媛꾧꺽 */
+    margin-bottom: 20px;
+    position: relative; /* 踰꾪듉�쓣 �긽���쟻�쑝濡� �쐞移섏떆�궎湲� �쐞�븳 �꽕�젙 */
+    align-items: flex-end;
+}
+
+.community-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+    margin-right: 20px; /* �젣紐⑷낵 �젙�젹 硫붾돱 �궗�씠�쓽 媛꾧꺽 */
+}
+
+.sort-menu {
+    flex-shrink: 0;
+}
+
+.sort-select {
+    border: 1px solid #BEBEBE;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* 寃��깋李쎄낵 �꽑�깮李쎌쓣 媛먯떥�뒗 而⑦뀒�씠�꼫 */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 寃��깋李쎄낵 �꽑�깮李� �궗�씠�쓽 媛꾧꺽 */
+    border: 1px solid #BEBEBE; /* �뀒�몢由� 異붽� */
+    border-radius: 15px; /* 紐⑥꽌由щ�� �뫁湲�寃� */
+    padding: 5px; /* �븞履� �뿬諛� */
+}
+
+.search-select,
+.search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #FFFFFF; /* �뀒�몢由� �씛�깋�쑝濡� 蹂�寃� */
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* 而ㅻ�ㅻ땲�떚 由ъ뒪�듃 �뒪���씪 */
+.community-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.post-header-custom{
+    display: flex;
+    align-items: center;
+}
+.post-header {
+    display: flex;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.post-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.post-title a {
+    text-decoration: none; /* 留곹겕�쓽 諛묒쨪 �젣嫄� */
+    color: #333333;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+/* 寃뚯떆湲� �빆紐� */
+.post-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.post-item .vertical-line {
+    width: 2px;
+    height: 40px;
+    background-color: transparent; 
+    margin-right: 10px;
+}
+
+.post-number, .post-title, .post-author, .post-date, .post-views {
+    flex: 1;
+    text-align: center;
+}
+
+/* 怨듭��궗�빆 �젣紐� �뒪���씪 */
+.notice-title, .notice-detail-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* �뀒�씠釉� �뒪���씪 */
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.notice-table th, .notice-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #B4B3AE;
+}
+
+.notice-table th {
+    font-weight: 700;
+}
+
+.notice-table td a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.notice-table td a:hover {
+    text-decoration: underline;
+}
+
+/* �럹�씠吏��꽕�씠�뀡 �뒪���씪 */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    font-size: 14px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+/* 怨듭��궗�빆 �긽�꽭 �럹�씠吏� �뒪���씪 */
+.meta-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.meta-info .author, 
+.meta-info .date, 
+.meta-info .views {
+    margin-right: 5px; /* 媛꾧꺽�쓣 醫곴쾶 �꽕�젙 */
+}
+
+.meta-info .date, 
+.meta-info .views {
+    font-size: 12px;
+    color: #BDBDBD;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px; /* �닔�젙 �궘�젣 踰꾪듉 媛꾩쓽 媛꾧꺽�쓣 醫곴쾶 �꽕�젙 */
+    margin-left: auto;
+}
+
+.edit-button, .delete-button {
+    width: 60px;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: white;
+    color: #EF7EB0;
+    border: 1px solid #EF7EB0;
+    cursor: pointer;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #EF7EB0;
+    color: white;
+}
+
+/* 援щ텇�꽑 �뒪���씪 */
+.cline, .cline-1, .cline-2 {
+    width: 100%;
+    border: 1px solid #EF7EB0;
+    margin: 10px 0;
+}
+
+.cline {
+    border: 1px solid #EF7EB0;
+}
+
+/* �궡�슜 �뒪���씪 */
+.content {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 40px;
+    height: 300px;
+}
+
+/* 踰꾪듉 �뒪���씪 */
+.back-button, .list-button, .submit-button, .comment-delete-button, .back-button-custom {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: white;
+    color: #EF7EB0;
+    border: 1px solid #EF7EB0;
+    float: right;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+}
+
+.back-button:hover, .list-button:hover, .submit-button:hover, .comment-delete-button:hover, .back-button-custom:hover{
+    background-color: #EF7EB0;
+    color: white;
+}
+
+/* �젣紐� �엯�젰 �븘�뱶 �뒪���씪 */
+.title-input {
+    width: 100%;
+    height: 46px;
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+    background: none;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* �궡�슜 �엯�젰 �븘�뱶 �뒪���씪 */
+.content-input {
+    width: 100%;
+    height: 350px;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    background: none;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* 踰꾪듉�뱾�쓣 媛먯떥�뒗 div */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+/* �뤌 踰꾪듉 �뒪���씪 */
+.form-button {
+    width: 80px; 
+    height: 40px; 
+    font-weight: 600;
+    background-color: white;
+    color: #585252;
+    border: 1px solid;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.form-button:hover {
+    background-color: #585252;
+    color: white;
+}
+
+/* �떊怨좏븯湲� 踰꾪듉 �뒪���씪 */
+.report-btn-custom {
+    position: absolute;
+    width: 80px;
+    height: 36px;
+    right: 20px; /* �삤瑜몄そ �뿬諛� 議곗젙 */
+    top: 20px;   /* �쐞履� �뿬諛� 議곗젙 */
+    background: white;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #BDBDBD;
+}
+
+/* 寃뚯떆湲� 諛뺤뒪 �뒪���씪 */
+.post-box-custom {
+    width: 100%;
+    max-width: 1142px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #EF7EB0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative; /* �떊怨좏븯湲� 踰꾪듉�쓣 湲� 諛뺤뒪 諛뽰쑝濡� �쐞移섏떆�궎湲� �쐞�븿 */
+}
+
+/* 寃뚯떆湲� �젣紐� �뒪���씪 */
+.post-title-custom {
+    font-weight: 700;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* �봽濡쒗븘 �젙蹂� */
+.profile-info-custom {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.profile-image-custom {
+    width: 40px;
+    height: 40px;
+    background: #D9D9D9;
+    border-radius: 50%;
+}
+
+.author-info-custom {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.author-name-custom {
+    font-size: 18px;
+    color: #333333;
+}
+
+.post-date-custom {
+    font-size: 16px;
+    color: #BDBDBD;
+}
+
+/* 援щ텇�꽑 �뒪���씪 */
+.divider-custom {
+    width: 100%;
+    border: 1px solid #EF7EB0;
+    margin: 10px 0;
+}
+
+/* �궡�슜 �뒪���씪 */
+.post-content-custom {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+/* �빐�떆�깭洹� �뒪���씪 */
+.post-tags-custom {
+    margin-top: 10px;
+}
+
+.tag-custom {
+    display: inline-block;
+    padding: 10px;
+    background: #FAE0D7;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #655189;
+}
+
+/* 議고쉶�닔, �뙎湲�, 醫뗭븘�슂 */
+.post-stats-custom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.views-comments-custom {
+    font-size: 16px;
+    color: #333333;
+}
+
+.like-image-custom {
+    width: 30px;
+    height: 30px;
+}
+
+.likes-custom {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* �뙎湲� �꽮�뀡 �뒪���씪 */
+.comment-section-custom {
+    margin-top: 20px;
+    position: relative;
+}
+
+/* �뙎湲� �옉�꽦 諛뺤뒪 �뒪���씪 */
+.comment-write-box-custom {
+    width: 100%;
+    max-width: 1142px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(250, 224, 215, 0.5);
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* �뙎湲� �엯�젰 �븘�뱶 �뒪���씪 */
+.comment-write-input-custom {
+    width: calc(100% - 106px); /* padding, gap, submit 踰꾪듉 �겕湲곕�� 怨좊젮 */
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+/* �뙎湲� �닔�젙/�궘�젣 踰꾪듉 �뒪���씪 */
+.comment-edit-btn-custom, .comment-delete-btn-custom{
+    width: 65px;
+    height: 36px;
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    background: white;
+    font-size: 16px;
+    color: #EF7EB0;
+    margin-left: auto;
+}
+
+.comment-submit-btn-custom{
+    width: 80px;
+    height: 36px;
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    background: white;
+    font-size: 16px;
+    color: #EF7EB0;
+}
+
+.comment-edit-btn-custom:hover, .comment-delete-btn-custom:hover, .comment-submit-btn-custom:hover {
+    background-color: #EF7EB0;
+    color: white;
+}
+
+/* 紐⑸줉 踰꾪듉 �뒪���씪 */
+.list-btn-custom {
+    display: block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #EF7EB0;
+    border: 2px solid #EF7EB0;
+    border-radius: 10px;
+    background: none;
+}
+/* 寃뚯떆湲� 諛뺤뒪 �뒪���씪 */
+.post-box {
+    width: 216px;
+    height: 216px;
+    background-color: white;
+    border-radius: 20px;
+
+    position: relative; /* �긽�떒 諛� �븯�떒 諛뺤뒪瑜� �쐞移섏떆�궎湲� �쐞�븿 */
+    box-sizing: border-box;
+}
+
+/* �긽�떒 �쁺�뿭 �뒪���씪 */
+.post-header {
+    width: 216px;
+    height: 50px;
+    background-color: #EF7EB0;
+    border-radius: 15px 15px 0 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* �긽�떒 �쁺�뿭 �옉�꽦�옄 �씠由� 諛� 議고쉶�닔 �뒪���씪 */
+.post-header .author-name {
+    font-weight: bold;
+}
+
+.post-header .view-count {
+    font-size: 14px;
+}
+
+.admin-post-header {
+    display: flex;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.admin-post-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.admin-post-header .author-name {
+    font-weight: bold;
+}
+
+.admin-post-header .view-count {
+    font-size: 14px;
+}
+
+.admin-post-header .post-checkbox {
+    margin-right: 15px;
+}
+
+/* 以묎컙 �쁺�뿭 �젣紐� �뒪���씪 */
+.post-title {
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* �븯�떒 �쁺�뿭 �뒪���씪 */
+.post-footer {
+    width: 216px;
+    height: 50px;
+    background-color: #EF7EB0;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* �븯�떒 �쁺�뿭 �뙎湲� �닔�� 醫뗭븘�슂 �닔 �뒪���씪 */
+.post-footer .comment-count {
+    font-size: 14px;
+    margin: 10px;
+}
+
+.post-footer .likes-count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.post-footer .heart-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.more{
+    margin: 10px;
+    font-weight: 300px;
+    float: right;
+    font-size: 16px;
+    color: #333333;
+}
+
+/* �긽�떒 �쁺�뿭 �뒪���씪 */
+.hash-post-header {
+    width: 216px;
+    height: 50px;
+    background-color: #DAA7C6;
+    border-radius: 15px 15px 0 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* �긽�떒 �쁺�뿭 �옉�꽦�옄 �씠由� 諛� 議고쉶�닔 �뒪���씪 */
+.hash-post-header .author-name {
+    font-weight: bold;
+}
+
+.hash-post-header .view-count {
+    font-size: 14px;
+}
+
+/* �븯�떒 �쁺�뿭 �뒪���씪 */
+.hash-post-footer {
+    width: 216px;
+    height: 50px;
+    background-color: #DAA7C6;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* �븯�떒 �쁺�뿭 �뙎湲� �닔�� 醫뗭븘�슂 �닔 �뒪���씪 */
+.hash-post-footer .comment-count {
+    font-size: 14px;
+    margin: 10px;
+}
+
+.hash-post-footer .likes-count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.hash-post-footer .heart-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* �젣紐� �엯�젰 �븘�뱶 �뒪���씪 */
+.com-title-input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* �궡�슜 �엯�젰 �븘�뱶 �뒪���씪 */
+.com-content-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.com-content-input {
+    width: 100%;
+    height: 444px;
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.com-content-info {
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+/* �빐�떆�깭洹� �엯�젰 �븘�뱶 �뒪���씪 */
+.com-hashtag-section {
+    margin-bottom: 30px;
+}
+
+.com-hashtag-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.com-hashtag-input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #EF7EB0;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 踰꾪듉�뱾�쓣 媛먯떥�뒗 div */
+.com-button-container {
+    text-align: center;
+    width: 100%; /* 遺�紐� 而⑦뀒�씠�꼫�뿉 留욊쾶 �솗�옣 */
+}
+
+.com-community-submit-button {
+    width: 200px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #EF7EB0;
+    border: 2px solid #EF7EB0;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 10px; /* 踰꾪듉�쓣 �궡�슜怨� 媛꾧꺽�쓣 �몢湲� �쐞�빐 */
+}
+
+.com-community-submit-button:hover {
+    background-color: #EF7EB0;
+    color: white;
+}
+
+.comment-profile-image-custom {
+    width: 30px;
+    height: 30px;
+    background: #D9D9D9; /* 湲곕낯 諛곌꼍 �깋�긽 */
+    border-radius: 50%; /* �썝�삎�쑝濡� 留뚮뱾湲� */
+}
+
+.write-button{
+    width: 100px;
+    height: 40px;
+    font-weight: 400px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: white;
+    color: #EF7EB0;
+    border: 2px solid #EF7EB0;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative; 
+    margin-left: auto;
+}
+
+.write-button:hover{
+    background-color: #EF7EB0;
+    color: white;
+}
+
+.admin-notice-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.comment-author-name-custom{
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px; /* �씠由꾧낵 �궇吏� �궗�씠�뿉 �뿬諛� 異붽� */
+}
+
+.comment-author-info-custom{
+    display: flex;
+    align-items: center; /* �닔吏곸쑝濡� 以묒븰 �젙�젹 */
+}
+.comment-author-name-custom {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px; /* �씠由꾧낵 �궇吏� �궗�씠�뿉 �뿬諛� 異붽� */
+}
+
+.comment-author-info-custom {
+    display: flex;
+    align-items: center; /* �닔吏곸쑝濡� 以묒븰 �젙�젹 */
+}
+
+.comment-buttons-custom {
+    display: flex;
+    align-items: center; /* 踰꾪듉怨� �뀓�뒪�듃瑜� �닔吏� 以묒븰 �젙�젹 */
+    justify-content: space-between; /* 踰꾪듉怨� �뀓�뒪�듃 �궗�씠�뿉 �뿬諛� 異붽� */
+    margin-top: 10px; /* �뙎湲� �궡�슜怨� 踰꾪듉 �궗�씠�쓽 �뿬諛� */
+}
+
+.comment-content-custom {    
+    margin-right: 10px; /* 踰꾪듉怨� �뙎湲� �궡�슜 �궗�씠�뿉 �뿬諛� 異붽� */
+}
+
+.like {
+    display: flex;
+    align-items: center; /* �씠誘몄��� �뀓�뒪�듃媛� �닔吏곸쑝濡� 以묒븰 �젙�젹 */
+    gap: 5px; /* �씠誘몄��� �뀓�뒪�듃 �궗�씠�쓽 媛꾧꺽 議곗젅 */
+}

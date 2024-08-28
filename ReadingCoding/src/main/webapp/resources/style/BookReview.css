@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 
-/* ³» ¼­Àç ½ÃÀÛÆäÀÌÁö (Ä¶¸°´õ - µ¶ÈÄ°¨ ÀÛ¼º) */
+
+/* ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Ä¶ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½Ä°ï¿½ ï¿½Û¼ï¿½) */
+
+/* ë‚´ ì„œì¬ ì‹œì‘í˜ì´ì§€ (ìº˜ë¦°ë” - ë…í›„ê° ì‘ì„±) */
+
+body {
+    background-color: #ffffff;
+    /* padding: 20px; */
+}
+
 
 .profile-image {
     width: 70px;
@@ -55,7 +64,7 @@
     display: block;
 }
 
-/* Cafe24 Surround ÆùÆ® Ãß°¡ */
+/* Cafe24 Surround ï¿½ï¿½Æ® ï¿½ß°ï¿½ */
 @font-face {
     font-family: 'Cafe24Ssurround';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
@@ -84,7 +93,7 @@
     margin: 10px 0;
 }
 
-/* Noto Sans KR ÆùÆ® Ãß°¡ */
+/* Noto Sans KR ï¿½ï¿½Æ® ï¿½ß°ï¿½ */
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 .menu {
@@ -239,8 +248,8 @@
 
 
 
-/* µ¶ÈÄ°¨ ÀÛ¼º (ÆË¾÷) */
-/* ¸ğ´Ş Ã¢ÀÇ ÀüÃ¼ ¹è°æ */
+/* ï¿½ï¿½ï¿½Ä°ï¿½ ï¿½Û¼ï¿½ (ï¿½Ë¾ï¿½) */
+/* ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ */
 .modal {
     display: none; 
     position: fixed; 
@@ -255,7 +264,7 @@
 }
 
 
-/* ¸ğ´Ş Ã¢ÀÇ ³»¿ë */
+/* ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .modal-content {
     background-color: #F5F5F5;
     margin: 15% auto; 
@@ -270,7 +279,7 @@
     padding: 30px 40px;
 }
 
-/* ¸ğ´Ş ´İ±â ¹öÆ° */
+/* ï¿½ï¿½ï¿½ ï¿½İ±ï¿½ ï¿½ï¿½Æ° */
 .close {
     color: #333;
     float: right;
@@ -286,7 +295,7 @@
 }
 
 
-/* °ø°³/ºñ°ø°³ ¼³Á¤ */
+/* ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .visibility-options {
     margin-top: 20px;
     margin-bottom: 30px; 
@@ -296,7 +305,7 @@
     margin-left: 30px;
 }
 
-/* Ã¥ °Ë»ö°ú ¿À´ÃÀÇ ±âºĞÀ» °°Àº ÁÙ¿¡ ¹èÄ¡ÇÏ´Â ÄÁÅ×ÀÌ³Ê */
+/* Ã¥ ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½ ï¿½ï¿½Ä¡ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ */
 .book-mood-container {
     display: flex; 
     justify-content: space-between; 
@@ -304,14 +313,14 @@
     margin-bottom: 30px; 
 }
 
-/* Ã¥ °Ë»ö ¼½¼Ç */
+/* Ã¥ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .book-search-container {
     position: relative;
     width: 300px;
     height: 40px; 
 }
 
-/* Ã¥ °Ë»ö ÀÔ·Â ÇÊµå */
+/* Ã¥ ï¿½Ë»ï¿½ ï¿½Ô·ï¿½ ï¿½Êµï¿½ */
 .book-search-input {
     width: 100%; 
     height: 100%;
@@ -322,7 +331,7 @@
     border-radius: 5px;
 }
 
-/* °Ë»ö ¹öÆ° */
+/* ï¿½Ë»ï¿½ ï¿½ï¿½Æ° */
 .book-search-btn {
     position: absolute;
     top: 50%;
@@ -341,14 +350,14 @@
     text-align: center; 
 }
 
-/* Ã¥ °Ë»ö ¼½¼Ç */
+/* Ã¥ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .book-search-container {
     position: relative;
     width: 300px;
     height: 40px; 
 }
 
-/* Ã¥ °Ë»ö ÀÔ·Â ÇÊµå */
+/* Ã¥ ï¿½Ë»ï¿½ ï¿½Ô·ï¿½ ï¿½Êµï¿½ */
 .book-search-input {
     width: 100%; 
     padding: 8px 70px 8px 10px;
@@ -362,7 +371,7 @@
     background-color: rgba(196, 178, 206, 0.3); 
 }
 
-/* ¿À´ÃÀÇ ±âºĞ ¼±ÅÃ ¼½¼Ç */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .mood-container {
     position: relative;
     display: flex;
@@ -411,7 +420,7 @@
     cursor: pointer;
 }
 
-/* Á¦¸ñ ÀÔ·Â */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ */
 .title-container {
     display: flex;
     justify-content: flex-end; 
@@ -432,7 +441,7 @@
     outline: none; 
 }
 
-/* ³¯Â¥ ¼±ÅÃ */
+/* ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½ */
 .date-container {
     margin-bottom: 25px; 
 }
@@ -452,7 +461,7 @@
 
 .content-input {
     display: flex;
-    justify-content: flex-end; /* ¿À¸¥ÂÊ Á¤·Ä */
+    justify-content: flex-end; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     width: 100%;
     padding: 10px;
     border: none;
@@ -464,7 +473,7 @@
     height: 200px; 
 }
 
-/* ¸ğ´ŞÀÇ ¹öÆ°À» ¿À¸¥ÂÊ ¾Æ·¡¿¡ À§Ä¡½ÃÅ°±â À§ÇÑ ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .modal-footer {
     margin-top: auto; 
     display: flex;
@@ -473,7 +482,7 @@
     margin-bottom: 20px; 
 }
 
-/* ÀúÀå ¹öÆ° ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ */
 #saveBtn {
     width: 115px;
     height: 50px;
@@ -492,7 +501,7 @@
     background-color: rgba(227, 200, 242, 0.3);
 }
 
-/* »èÁ¦ ¹öÆ° ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ */
 #deleteBtn {
     width: 115px;
     height: 50px;
@@ -510,7 +519,7 @@
     background-color: rgba(219, 167, 194, 0.15);
 }
 
-/* (´Ş·Â)µ¥ÀÌÅÍ ¹ŞÀº °ª */
+/* (ï¿½Ş·ï¿½)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
 /* .titlereview {
     width: 130px;
     height: 30px;
@@ -535,7 +544,7 @@
 
 
 
-/* °ü½Éµî·Ï */
+/* ï¿½ï¿½ï¿½Éµï¿½ï¿½ */
 .book-list {
     text-align: center;
     margin: 0 170px;
@@ -585,7 +594,7 @@
     height: auto; 
 }
 
-/* ¼±ÅÃµÈ Ã¥ ÀÌ¹ÌÁö ¿À¹ö·¹ÀÌ */
+/* ï¿½ï¿½ï¿½Ãµï¿½ Ã¥ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .book-card {
     display: flex;
     flex-direction: column; 
@@ -595,7 +604,7 @@
 }
 
 .book-card img {
-    width: 100%; /* ÀÌ¹ÌÁö Å©±â Á¶Á¤ */
+    width: 100%; /* ï¿½Ì¹ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     height: auto;
     object-fit: cover;
 }
@@ -606,19 +615,19 @@
     font-size: 14px;
 }
 
-/* ±âº» »óÅÂÀÇ ÀüÃ¼ ±Ç¼ö */
+/* ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½Ç¼ï¿½ */
 #bookLabel {
     font-size: 25px;
     font-weight: bold;
 }
 
-/* ÆíÁı ¸ğµå¿¡¼­ Àû¿ëÇÒ ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .edit-mode #bookLabel .select-all {
     color: #333333;
     font-size: 16px;
 }
 
-/* ÆíÁı ¸ğµå¿¡¼­¸¸ ¿À¹ö·¹ÀÌ¿Í »èÁ¦ ¾ÆÀÌÄÜÀÌ Ç¥½ÃµÇµµ·Ï ¼öÁ¤ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ÃµÇµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .edit-mode .book-card.selected {
     position: relative;
     background-color: rgb(216, 218, 219); 
@@ -629,12 +638,12 @@
     border: 1px solid #333333;
 }
 
-/* ÆíÁı ¸ğµå¿¡¼­ ¼±ÅÃµÈ Ä«µå ÀÌ¹ÌÁöÀÇ ¹İÅõ¸í Ã³¸® */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ Ä«ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ */
 .edit-mode .book-card.selected img {
     opacity: 0.7;
 }
 
-/* »èÁ¦ ¹× Ãë¼Ò ¹öÆ°À» ¼û±è »óÅÂ·Î ¼³Á¤ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .edit-actions {
     display: none; 
     margin-top: 20px; 
@@ -661,7 +670,7 @@
     cursor: pointer;
 }
 
-/* ¹öÆ° ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ */
 
 .delete {
     background-color: #C4B2CE; 
@@ -698,9 +707,9 @@
     color: white;
 }
 
-/* editButtons ½ºÅ¸ÀÏ */
+/* editButtons ï¿½ï¿½Å¸ï¿½ï¿½ */
 #editButtons {
-    display: none; /* ±âº»ÀûÀ¸·Î ¼û±è */
+    display: none; /* ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 }
 
 
@@ -714,7 +723,7 @@
 
 
 
-/* È¸¿ø¼öÁ¤ */
+/* È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 
 .wrap {
     font-family: "Noto Sans KR", sans-serif;
@@ -807,7 +816,7 @@ input[type="button"]:hover {
 }
 
 
-/* È¸¿øÅ»Åğ ¹öÆ° ½ºÅ¸ÀÏ (±Û¾¾¸¸ º¸ÀÌ°Ô) */
+/* È¸ï¿½ï¿½Å»ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ (ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½) */
 .deleteButton {
     background-color: transparent;
     border: none;
@@ -823,7 +832,7 @@ input[type="button"]:hover {
     margin-left: 25px;
 }
 
-/* ¹öÆ°µéÀ» ÀÔ·Â ÇÊµå¿Í °°Àº À§Ä¡¿¡ ¹èÄ¡ */
+/* ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Êµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½Ä¡ */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -850,7 +859,7 @@ input[type="button"]:hover {
     cursor: pointer;
 }
 
-/* È¸¿øÅ»Åğ ¹öÆ° È£¹ö È¿°ú */
+/* È¸ï¿½ï¿½Å»ï¿½ï¿½ ï¿½ï¿½Æ° È£ï¿½ï¿½ È¿ï¿½ï¿½ */
 .deleteButton:hover {
     color: #333333;
     text-decoration: underline;

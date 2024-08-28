@@ -3,16 +3,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서 검색 상세</title>
     <link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
 	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
     <div class="BookSearchContent">
         <div class="bookfullinfo">
             <h3>책 소개</h3>
@@ -91,5 +108,50 @@
             });
         });
     </script>
+    
+    <script>
+        function btnClick(element) {
+            const categorylist = document.getElementById('category-list');
+            const category = document.getElementById('category');
+            
+            const icon = element.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+            
+            if(categorylist.style.display === 'block') {
+                categorylist.style.display = 'none';
+                category.style.color = '#FFFFFF'; /* 기본 색상으로 변경 */
+                category.style.background = 'none'; /* 배경색 기본으로 변경 */
+                
+            } else {
+                categorylist.style.display = 'block';
+                category.style.color = 'var(--maincolor)'; /* 글자색을 --maincolor로 변경 */
+                category.style.background = '#FFFFFF'; /* 배경색을 흰색으로 변경 */
+            }
+        }
+        document.querySelector('category').addEventListener('click', function() {
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </body>
 </html>

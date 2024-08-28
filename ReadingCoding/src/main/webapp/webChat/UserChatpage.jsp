@@ -10,14 +10,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
 	<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
-	<link rel="stylesheet" href="../resources/style/logStyle.css">
 	
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<jsp:include page="../header.jsp"></jsp:include>
+<div class="nickname-container">
+        <div>
+            <img src="../resources/images/프로필 사진.png" alt="profile" class="profile-image">
+        </div>
+        <h1>니크네임데스</h1>
+        <p>님의 서재</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="menu">
+        <a href="../BookReview.jsp">독서기록</a>
+        <a href="../MyPage/interestBook.jsp">관심등록</a>
+        <a href="../MyPage/updateMember.jsp">회원수정</a>
+        <a href="UserChatpage.jsp">1:1 고객문의</a>
+    </div>
     <div class="chatcon">
         <div class="toktokcontainer">
             <h3>톡톡 문의하기</h3>
@@ -37,5 +52,7 @@
             </div>
         </div>
     </div>
+    
+    <jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

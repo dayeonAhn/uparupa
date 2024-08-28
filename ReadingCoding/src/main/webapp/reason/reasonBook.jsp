@@ -5,9 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
 	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
@@ -100,9 +97,15 @@
     $("#tab3").removeClass("is_on");
 })
 </script>
-
+<link rel="stylesheet" href="../resources/style/temp.css"> <!--재성 -->
 </head>
 <body>
+<style>
+        :root {
+            --maincolor: #65508B;
+        }
+    </style>
+    <jsp:include page="../header.jsp"></jsp:include>
 	<div id="wrap">
         <div class="tab_menu">
             <div class="tabImg">
@@ -188,7 +191,7 @@
     </div>
 
 
-    
+    <jsp:include page="../footer.jsp"></jsp:include>
 
 </body>
 </html>
