@@ -10,7 +10,7 @@
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         
     <!-- <button class="report-btn-custom">신고하기</button>-->
         <!-- 게시글 박스 -->

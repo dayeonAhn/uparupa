@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="/resources/style/com.css">
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <!-- 제목 입력 필드 -->
         <input type="text" id="title-input" class="title-input" placeholder="제목을 입력해 주세요">
-        <hr class="line-1">
+        <hr class="cline-1">
 
         <!-- 내용 입력 필드 -->
         <textarea id="content-input" class="content-input" placeholder="내용을 입력해 주세요"></textarea>
-        <hr class="line-2">
+        <hr class="cline-2">
         
         <!-- 버튼들을 감싸는 div 추가 -->
         <div class="button-container">

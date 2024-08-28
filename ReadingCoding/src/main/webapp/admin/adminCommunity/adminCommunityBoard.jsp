@@ -10,7 +10,7 @@
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <div class="admin-notice-title">혹시 로맨스 소설 추천 해주실 수 있을까요?</div>
         <div class="meta-info">
             <span class="author">채유니</span>
@@ -21,13 +21,13 @@
                 <button class="comment-delete-button">삭제</button>
             </div>
         </div>        
-        <hr class="line">
+        <hr class="cline">
         <div class="content">
             공지사항입니다.
         </div>
-        <hr class="line">
+        <hr class="cline">
         <div class="comment-count">댓글(1개)</div>
-        <hr class="line">
+        <hr class="cline">
         <div class="comment-section-custom">
             <div class="comment-author-info-custom">
                 <div class="comment-author-name-custom">유미니</div>
@@ -38,7 +38,7 @@
                 <button class="comment-delete-button">삭제</button>
             </div>
         </div>
-        <hr class="line">
+        <hr class="cline">
     </div>
 </body>
 </html>

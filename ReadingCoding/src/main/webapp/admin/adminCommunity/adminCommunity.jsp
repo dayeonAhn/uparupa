@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="/resources/style/com.css">
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <!-- 상단 바 -->
         <div class="top-bar">
             <!-- 페이지 제목 -->

@@ -10,7 +10,7 @@
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <h1 class="notice-title">공지사항입니다.</h1>
         <div class="meta-info">
             <span class="author">관리자</span>
@@ -21,11 +21,11 @@
                 <button class="delete-button">삭제</button>
             </div>
         </div>        
-        <hr class="line">
+        <hr class="cline">
         <div class="content">
             공지사항입니다.
         </div>
-        <hr class="line">
+        <hr class="cline">
         <button class="back-button" onclick="window.location.href='adminNotice.jsp'">목록</button>
     </div>
 </body>

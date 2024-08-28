@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="/resources/style/com.css">
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <!-- 제목 입력 필드 -->
         <input type="text" id="title-input" class="com-title-input" placeholder="제목을 입력해 주세요">
 

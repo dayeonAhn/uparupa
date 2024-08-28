@@ -10,7 +10,7 @@
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <!-- 상단 바 -->
         <div class="top-bar">
             <!-- 페이지 제목 -->

@@ -10,11 +10,11 @@
     <script src="/resources/script/com.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="com-container">
         <!-- 상단 바 -->
         <div class="top-bar">
             <div class="post-tags-custom">
-                <a href="hashtag.html"><span class="tag-custom">#독서맛집</span></a>
+                <a href="hashtag.jsp"><span class="tag-custom">#독서맛집</span></a>
             </div>
 
             <!-- 정렬 순서 선택 메뉴 -->
@@ -35,7 +35,7 @@
             </div>
 
             <!-- 글쓰기 버튼 -->
-            <button class="write-button">글쓰기</button>
+            <button class="write-button" onclick="window.location.href='communityForm.jsp'">글쓰기</button>
         </div>
 
         <div class="post-box">
