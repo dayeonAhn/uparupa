@@ -2,15 +2,14 @@ $(document).ready(function () {
     $('#search').click(function() {
         $.ajax({
             method: "GET",
-            url: "https://dapi.kakao.com/v3/search/book",
+            url: "https://dapi.kakao.com/v3/search/book?query=title",
             data: { query: $("#bookName").val() },
             headers: { Authorization: "KakaoAK e76ab04a10cbf3e41e31593cd4c13d70" }
         })
         .done(function (res) {
-/*        	console.log("내용" + res.document[0]);*/
-            if (res.documents && res.documents.length > 0) {
-                $(".BookContentList").empty();
-
+        	console.log("내용" + res.document[0]);
+            if (res.documents && res.documents.length > 0) {  /*검색관련 도서가 있는 경우*/
+/*                $(".BookContentList").empty();*/
                 for (let i = 0; i < res.documents.length; i++) {
                     const book = res.documents[i];
                     const dateParts = book.datetime.split('T')[0].split('-');

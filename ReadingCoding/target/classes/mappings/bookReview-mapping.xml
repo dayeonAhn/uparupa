@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bookReviewDAOmybatis">
+
+	<resultMap id="bookReview" type="BookReviewDTO">
+	    <result property="review_no" column="REVIEW_NO" />
+		<result property="id" column="ID" />
+		<result property="isbn" column="ISBN" />
+		<result property="revTitle" column="REVTITLE" />
+		<result property="revContent" column="REVCONTENT" />
+		<result property="revRegdate" column="REVREGDATE" />
+		<result property="open_close" column="OPEN_CLOSE" />
+		<result property="emotion" column="EMOTION" />
+	</resultMap>
+	
+	<!-- 독후감 글 조회 -->
+    <select id="insertReview" parameterType="map" resultMap="bookReview">
+        select * from bookreview where open_close = 1 and isbn=#{isbn} and id=#{id}
+    </select>
+    
+</mapper>

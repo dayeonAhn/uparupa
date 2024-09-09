@@ -3,15 +3,27 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-			<!-- datasource 설정 -->
+	<!-- datasource 설정 -->
+    <properties resource="database.properties" />
+    
+    <settings>
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+    
 	<typeAliases>
-		<typeAlias alias="Booksearch" type="org.rc.uparupa.booksearch.BookDTO"/>
-	</typeAliases>
+		<typeAlias alias="userDTO" type="org.rc.uparupa.LoginMapping.LoginDTO"/>
+		<typeAlias alias="interestBookDTO" type="org.rc.uparupa.booksearch.InterestBookDTO"/>
+		<typeAlias alias="bookReviewDTO" type="org.rc.uparupa.mypage.BookReviewDTO"/>
+	</typeAliases>  
 	
-
 	<!-- sql mapping 설정 -->
 	<mappers>
-		<mapper resource="mappings/bookSearch-mapping.xml"/>
+		<mapper resource="mapping/login-mapping.xml"/>
+		<mapper resource="mappings/bookReview-mapping.xml"/>
+		<mapper resource="mappings/interestBook-mapping.xml"/>
 	</mappers>
 	
+
+	
 </configuration>
+

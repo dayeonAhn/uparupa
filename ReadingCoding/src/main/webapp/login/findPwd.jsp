@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
 	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
 <script>
 //findPwd
@@ -55,6 +53,13 @@
 
 	    <input type="submit" value="작성완료">
 	</form>
-    
+	
+	
+    <c:if test="${not empty msg }">
+    	<script>
+    		alert('${msg }')
+    	</script>
+    	<c:remove var="msg" scope="session" />
+    </c:if>
 </body>
 </html>

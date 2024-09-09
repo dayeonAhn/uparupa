@@ -34,7 +34,7 @@
                     <img src="${pageContext.request.contextPath}/resources/images/uparuLogo.png" alt="로고"> <!-- 로고 이미지 경로를 수정하세요 -->
                 </div>
                 <div class="mainPage-menu">
-                    <a href="${pageContext.request.contextPath}/admin/memberList.jsp">회원관리</a>
+                    <a href="memberList.do">회원관리</a>
                     <a href="${pageContext.request.contextPath}/admin/adminCommunity/adminCommunity.jsp ">커뮤니티</a>
                     <a href="${pageContext.request.contextPath}/admin/adminNotice/adminNotice.jsp">공지사항</a>
                 </div>

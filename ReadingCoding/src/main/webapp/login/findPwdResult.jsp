@@ -5,9 +5,6 @@
 <head>
 <meta charset="UTF-8">
     <title>Insert title here</title>
-   	<link rel="stylesheet" href="../resources/style/bookSearchBoardcss.css"> <!-- 다연  -->
-   	<link rel="stylesheet" href="../resources/style/com.css"> <!-- 채윤 -->
-	<link rel="stylesheet" href="../resources/style/BookReview.css"> <!--유민 -->
 	<link rel="stylesheet" href="../resources/style/logStyle.css">  <!-- 의연 -->
     <script>
         function pwdResultForm(form){
@@ -36,7 +33,7 @@
             <h2>비밀번호 찾기</h2>
             <span>설정할 새로운 비밀번호를 입력해주세요</span>
         </div>
-        <form class="findPwdFrm" action="login/updatePwd.do" method="post" onsubmit="return pwdResultForm(this)">
+        <form class="findPwdFrm" action="findPwdResult.do" method="post" onsubmit="return pwdResultForm(this)">
             <div class="findPwdResult">
                 <b>비밀번호</b>
                 <input type="text" class="pwdResult" id="pwdResult" name="pwdResult" placeholder="새로운 비밀번호를 입력해주세요"/>
@@ -47,6 +44,7 @@
                 <input type="password" class="pwdResultChk" id="pwdResultChk" name="pwdResultChk"/>
             </div>
 
+    	    <input type="hidden" name="findEmail" value="${findE }">
     	    <input type="submit" value="작성완료">
 	    </form>
 	</div>

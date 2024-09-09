@@ -7,7 +7,6 @@ img {width : 100%}
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
-    padding-bottom: 150px;
 }
 
 .BookSearchContent {
@@ -16,7 +15,6 @@ body {
     padding: 0 20px; 
     margin-top: 79px;
     margin-bottom: 52px;
-    padding-bottom: 150px;
 }
 
 .BookSearchListTop {
@@ -51,7 +49,7 @@ body {
 
 
 /* 드롭바스 */
-.dropdown-el {
+/* .dropdown-el {
     min-width: 153px;
     position: relative;
     display: inline-block;
@@ -69,13 +67,23 @@ body {
     border-radius: 5px;
     background-color: #ffffff;
      
-  }
+  } */
   
   .BookSearchListTop .dropdown-el {
     margin-left: auto;
     margin-right: 10px;
 }
-  
+
+#sortType {
+	width:143px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #bebebe;
+}
+
+
+
+/*   
   .dropdown-el input:focus + label {
     background: #def;
   }
@@ -148,7 +156,9 @@ body {
 
   .dropdown-el.expanded::after {
     transform: translateY(-50%) rotate(-180deg);
-  }
+  } */
+  
+   
 
   /* select drop box 끝 */
 
@@ -181,12 +191,18 @@ body {
     margin-left: 44px;
 }
 
+.bookstar img.star-icon {
+    cursor: pointer;
+}
+
 .bookimg img {
     width: 100%;
     height: auto;
 }
 
 .bookDetails {
+
+/*     justify-content: center;  */
     align-items: flex-start;
 }
 
@@ -270,7 +286,7 @@ body {
 }
 
 .BookSearchListTop, .BookContentList{
-	position: absolute; 
+	/* position: absolute;  */
 }
 .BookSearchListTop{
 	z-index: 200; 
@@ -368,9 +384,8 @@ body {
   font-weight: bold;
   width: 100%;
   height: 167px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -400,6 +415,16 @@ body {
   margin-top: 10px;
   color: #333333;
   text-align: left; 
+  /* padding-left: 21px;  */
+  width: 100%; 
+}
+
+.debookTitle2 {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #333333;
+  text-align: left; 
   padding-left: 21px; 
   width: 100%; 
 }
@@ -411,6 +436,17 @@ body {
   font-weight: normal;
   color: #4E4E4E;
   width: 100%; 
+}
+
+.debookpub {
+  display: block;
+  text-align: left; 
+  margin-top: 5px; 
+  font-weight: normal;
+  color: #4E4E4E;
+  width: 100%; 
+  font-size: 15px;
+  padding-bottom: 10px;
 }
 
 
@@ -716,6 +752,57 @@ body {
 
 
 
+
+
+
+
+
+
+
+.BookSearchContent {
+  margin-bottom: 100px;
+  
+}
+
+.BookSearchContent {
+  z-index: 1;
+  position: relative;
+}
+
+.BookSearchContent,
+footer {
+    z-index: auto;
+}
+
+footer {
+  height: 1000px;
+}
+
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+}
+
+.pagination a:hover {
+  font-weight: bold;
+}
+
+.BookSearchContent {
+  margin-bottom: 100px;
+}
+
+.BookContentList {
+  margin-bottom: 20px;
+}
 
 
 

@@ -58,48 +58,38 @@
                 <!-- 검색의 영역 -->
                 <div class="mainPage-search">
                     <input id="bookName" type="text" placeholder="검색어를 입력하세요">
-                    <a href="${pageContext.request.contextPath}/search/BookSearchBoard.jsp">
-                       <button class="fa fa-search"></button>
-                    </a>
+                    <!-- <span id="searchButton"> -->
+                       <button id="searchButton" class="fa fa-search"></button>
+                    <!-- </span> -->
                 </div>
             </div>
             <div id="mainPage-category-list" class="mainPage-category-list">
           <div class="mainPage-category-frame">
-              
-              
-            <a href="${pageContext.request.contextPath}/search/BookCategortList.jsp">
-                <div class="mainPage-category-box">역사, 지리, 관광</div>
-            </a>
-         
-            <a href="#">
-                <div class="mainPage-category-box">자연과학</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">사회과학</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">기술과학</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">문학</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">언어</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">예술</div>
-            </a>
-            
-            <a href="#">
-                <div class="mainPage-category-box">철학, 심리학, 윤리학</div>
-            </a>
-              
-          </div>
+		    <a href="${pageContext.request.contextPath}/search/BookCatenew.jsp" class="mainPage-category-box" >
+		        <div class="mainPage-category-box">신간도서</div>
+		    </a>
+		    <a href="${pageContext.request.contextPath}/search/BookCatekor.jsp" class="mainPage-category-box">
+		        <div class="mainPage-category-box">국내도서</div>
+		    </a>
+		    <a href="${pageContext.request.contextPath}/search/BookCatefor.jsp" class="mainPage-category-box">
+		        <div class="mainPage-category-box">외국도서</div>
+		    </a>
+		    <a href="${pageContext.request.contextPath}/search/BookCategortList.jsp" class="mainPage-category-box">
+		        <div class="mainPage-category-box">[EVENT] 슬램덩크 개봉 기념</div>
+		    </a>
+		    <!-- <a href="#" class="mainPage-category-box" onclick="searchCategory('문학')">
+		        <div class="mainPage-category-box">문학</div>
+		    </a>
+		    <a href="#" class="mainPage-category-box" onclick="searchCategory('언어')">
+		        <div class="mainPage-category-box">언어</div>
+		    </a>
+		    <a href="#" class="mainPage-category-box" onclick="searchCategory('예술')">
+		        <div class="mainPage-category-box">예술</div>
+		    </a>
+		    <a href="#" class="mainPage-category-box" onclick="searchCategory('철학,심리학,윤리학')">
+		        <div class="mainPage-category-box">철학, 심리학, 윤리학</div>
+		    </a> -->
+		</div>
       </div>
         </div>
 
@@ -128,10 +118,33 @@
                 category.style.background = '#FFFFFF'; /* 배경색을 흰색으로 변경 */
             }
         }
-        document.querySelector('mainPage-category').addEventListener('click', function() {
+        /* document.querySelector('mainPage-category').addEventListener('click', function() {
             this.querySelector('i').classList.toggle('fa-bars');
             this.querySelector('i').classList.toggle('fa-times');
-        });
-    </script>
+        }); */
+        
+        
+        //다연 추가  - 검색을 통해 도서 검색 페이지 이동 
+        
+         document.addEventListener('DOMContentLoaded', function() {
+		    const searchButton = document.getElementById('searchButton');
+		    
+		    searchButton.addEventListener('click', function(event) {
+		        event.preventDefault();  // 기본 동작 막기
+		        const searchInpBook = document.getElementById('bookName').value.trim();
+		        if (searchInpBook) {
+		            const encodedSearchTitle = encodeURIComponent(searchInpBook);
+		            console.log("Encoded Search Query:", encodedSearchTitle);  // 로그 확인
+		            window.location.href = "${pageContext.request.contextPath}/search/BookSearchBoard.jsp?query=" + encodedSearchTitle;
+		        } else {
+		            alert('검색어를 입력하세요');
+		        }
+		    });
+		});
+        
+
+
+    
+	</script>
 </body>
 </html>

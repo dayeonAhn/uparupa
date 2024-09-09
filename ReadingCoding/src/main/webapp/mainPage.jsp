@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html l
+ang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,18 +10,16 @@
 </head>
 
 <body>
-	<style>
-        :root {
-            --maincolor: #65508B;
-        }
-    </style>
+
     <jsp:include page="./header.jsp"></jsp:include>
+    
+    
 	<div class="main-page">
 		<div class="banner-container">
 	        <div class="banner-slide">  
-	            <img src="resources/images/banner01.png" alt="배너1 이미지" />
-	            <img src="resources/images/banner02.png" alt="배너2 이미지" />
-	            <img src="resources/images/banner03.png" alt="배너3 이미지" />
+	            <img src="${pageContext.request.contextPath}/resources/images/banner01.png" alt="배너1 이미지" />
+	            <img src="${pageContext.request.contextPath}/resources/images/banner02.png" alt="배너2 이미지" />
+	            <img src="${pageContext.request.contextPath}/resources/images/banner03.png" alt="배너3 이미지" />
 	        </div>
 	        <div class="banner-buttons">
         	    <button class="active"></button>
@@ -57,28 +56,28 @@
 	    	<div class="today-book-title"><p><b>오늘의 책</b></p></div>
 	    	<div class="today-book-area">
 	    		<div class="today-book-rect">
-	    			<a href="#"><img class="main-book-image" src="resources/images/dragon_book.png" alt="흑막 용을 키우게 되었다" /></a>
+	    			<a href="#"><img class="main-book-image" src="${pageContext.request.contextPath}/resources/images/dragon_book.png" alt="흑막 용을 키우게 되었다" /></a>
 	    			<p>흑막 용을 키우게 되었다</p>
 	    		</div>
 	    		<div class="today-book-rect">
-	    			<a href="#"><img class="main-book-image" src="resources/images/lost_thing_book.png" alt="분실물이 돌아왔습니다" /></a>
+	    			<a href="#"><img class="main-book-image" src="${pageContext.request.contextPath}/resources/images/lost_thing_book.png" alt="분실물이 돌아왔습니다" /></a>
 	    			<p>분실물이 돌아왔습니다</p>
 	    		</div>
 	    		<div class="today-book-rect">
-	    			<a href="#"><img class="main-book-image" src="resources/images/coding_book.png" alt="세상에서 가장 쉬운 코딩책" /></a>
+	    			<a href="#"><img class="main-book-image" src="${pageContext.request.contextPath}/resources/images/coding_book.png" alt="세상에서 가장 쉬운 코딩책" /></a>
 	    			<p>세상에서 가장 쉬운 코딩책</p>
 	    		</div>
 	    	</div>
 	    </div>
 	    <div class="tie_bannder">
-	    	<a href="#"><img src="resources/images/instagram_banner.png" /></a>
-	    	<a href="#"><img src="resources/images/remember_banner.png" /></a>
+	    	<a href="#"><img src="${pageContext.request.contextPath}/resources/images/instagram_banner.png" /></a>
+	    	<a href="#"><img src="${pageContext.request.contextPath}/resources/images/remember_banner.png" /></a>
 	    </div>
     </div>
     
 		
     <jsp:include page="./footer.jsp"></jsp:include>
-    <script src='resources/script/mainPage.js'></script>
+    <script src='${pageContext.request.contextPath}/resources/script/mainPage.js'></script>
 </body>
 
 </html>

@@ -4,28 +4,26 @@
 
 <configuration>
 	<!-- datasource 설정 -->
-	<settings>
+    <properties resource="database.properties" />
+    
+    <settings>
         <setting name="jdbcTypeForNull" value="NULL" />
     </settings>
+    
 	<typeAliases>
 		<typeAlias alias="userDTO" type="org.rc.uparupa.LoginMapping.LoginDTO"/>
-	</typeAliases>
+		<typeAlias alias="interestBookDTO" type="org.rc.uparupa.booksearch.InterestBookDTO"/>
+		<typeAlias alias="bookReviewDTO" type="org.rc.uparupa.mypage.BookReviewDTO"/>
+	</typeAliases>  
 	
 	<!-- sql mapping 설정 -->
 	<mappers>
 		<mapper resource="mapping/login-mapping.xml"/>
-		<!-- 각 필요한 mapper 연결-> mappings 폴더 안에 만들기 -->
+		<mapper resource="mappings/bookReview-mapping.xml"/>
+		<mapper resource="mappings/interestBook-mapping.xml"/>
 	</mappers>
-
-  <typeAliases>
-		<typeAlias alias="Booksearch" type="org.rc.uparupa.booksearch.BookDTO"/>
-	</typeAliases>
 	
 
-	<!-- sql mapping 설정 -->
-	<mappers>
-		<mapper resource="mappings/bookSearch-mapping.xml"/>
-	</mappers>
 	
 </configuration>
 
